@@ -178,7 +178,9 @@ const selectedOptions = ref({})
 const selectedToppings = ref([])
 
 const menuId = computed(() => route.params.id)
-const menu = computed(() => menuStore.getMenuById(menuId.value))
+// getMenuById looks in the menus array (populated by fetchMenus).
+// Fall back to currentMenu which is populated by fetchMenuDetail (direct URL navigation).
+const menu = computed(() => menuStore.getMenuById(menuId.value) || menuStore.currentMenu)
 
 // Mock customizations - would come from API
 const customizations = ref([
@@ -203,8 +205,8 @@ const customizations = ref([
 ])
 
 const totalPrice = computed(() => {
-  const basePrice = menu.value?.price || 0
-  const toppingsPrice = selectedToppings.value.reduce((sum, t) => sum + t.price, 0)
+  const basePrice = Number(menu.value?.price || 0)
+  const toppingsPrice = selectedToppings.value.reduce((sum, t) => sum + Number(t.price || 0), 0)
   return (basePrice + toppingsPrice) * quantity.value
 })
 
@@ -230,7 +232,8 @@ const addToCart = () => {
 }
 
 const formatPrice = (price) => {
-  return price?.toLocaleString('zh-TW') || '0'
+  const n = Number(price)
+  return isNaN(n) ? '0' : n.toLocaleString('zh-TW')
 }
 
 onMounted(() => {

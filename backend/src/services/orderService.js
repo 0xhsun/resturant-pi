@@ -3,6 +3,16 @@ import { generateOrderNumber } from '../utils/orderNumber.js';
 import * as menuService from './menuService.js';
 import * as toppingService from './toppingService.js';
 
+// MySQL2 may return JSON columns as already-parsed objects or as strings depending on config.
+// This helper handles both cases safely.
+const parseJsonField = (val, fallback) => {
+  if (val === null || val === undefined) return fallback;
+  if (typeof val === 'string') {
+    try { return JSON.parse(val); } catch { return fallback; }
+  }
+  return val; // already parsed by mysql2
+};
+
 const createOrder = async (orderData) => {
   const { customerName, phone, items, specialRequests } = orderData;
   
@@ -116,8 +126,8 @@ const getOrderById = async (id) => {
     ...order,
     items: items.map(item => ({
       ...item,
-      customizations: JSON.parse(item.customizations || '{}'),
-      toppings: JSON.parse(item.toppings || '[]')
+      customizations: parseJsonField(item.customizations, {}),
+      toppings: parseJsonField(item.toppings, [])
     }))
   };
 };
@@ -147,8 +157,8 @@ const getOrderByNumber = async (orderNumber) => {
     ...order,
     items: items.map(item => ({
       ...item,
-      customizations: JSON.parse(item.customizations || '{}'),
-      toppings: JSON.parse(item.toppings || '[]')
+      customizations: parseJsonField(item.customizations, {}),
+      toppings: parseJsonField(item.toppings, [])
     }))
   };
 };

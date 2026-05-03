@@ -36,8 +36,8 @@ export const useOrderStore = defineStore('order', () => {
     error.value = null
     try {
       const response = await orderApi.getById(orderId)
-      currentOrder.value = response.data
-      return response.data
+      currentOrder.value = response.data.data || response.data
+      return currentOrder.value
     } catch (err) {
       error.value = err.response?.data?.message || '查詢訂單失敗'
       throw err
