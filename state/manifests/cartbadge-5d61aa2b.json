@@ -1,0 +1,19 @@
+{
+  "sourceId": "cartbadge-5d61aa2b",
+  "title": "CartBadge",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "vue",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/components/CartBadge.vue",
+  "repoRelativePath": "frontend/src/components/CartBadge.vue",
+  "storedPath": "raw/sources/cartbadge-5d61aa2b.vue",
+  "extractedTextPath": "state/extracts/cartbadge-5d61aa2b.md",
+  "extractedMetadataPath": "state/extracts/cartbadge-5d61aa2b.json",
+  "extractionHash": "c1a22c2942e967e69b589307e23fe3edd5657f1fef382ef60769f5c8ae6d6d98",
+  "mimeType": "application/octet-stream",
+  "contentHash": "5d61aa2bda575fc97f01e46759039dd42fcc505d0edffe6715a7c1a4f553ecf5",
+  "semanticHash": "5d61aa2bda575fc97f01e46759039dd42fcc505d0edffe6715a7c1a4f553ecf5",
+  "createdAt": "2026-05-03T15:02:37.070Z",
+  "updatedAt": "2026-05-03T15:02:37.070Z"
+}

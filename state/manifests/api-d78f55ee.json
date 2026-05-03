@@ -1,0 +1,18 @@
+{
+  "sourceId": "api-d78f55ee",
+  "title": "API 設定",
+  "originType": "file",
+  "sourceKind": "text",
+  "sourceClass": "first_party",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/.env.example",
+  "repoRelativePath": "frontend/.env.example",
+  "storedPath": "raw/sources/api-d78f55ee.example",
+  "extractedTextPath": "state/extracts/api-d78f55ee.md",
+  "extractedMetadataPath": "state/extracts/api-d78f55ee.json",
+  "extractionHash": "3236802b9f8a8fefd77ab78805254f801deb1d5bd36260ef63c9ea1d6e653b13",
+  "mimeType": "application/octet-stream",
+  "contentHash": "d78f55eecdd5478d8f1402a4788586b91ead95c3dacd9a5c34c547e372d4ea7e",
+  "semanticHash": "d78f55eecdd5478d8f1402a4788586b91ead95c3dacd9a5c34c547e372d4ea7e",
+  "createdAt": "2026-05-03T15:02:33.020Z",
+  "updatedAt": "2026-05-03T15:02:33.020Z"
+}

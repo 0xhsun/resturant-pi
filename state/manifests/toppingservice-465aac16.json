@@ -1,0 +1,19 @@
+{
+  "sourceId": "toppingservice-465aac16",
+  "title": "toppingService",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/src/services/toppingService.js",
+  "repoRelativePath": "backend/src/services/toppingService.js",
+  "storedPath": "raw/sources/toppingservice-465aac16.js",
+  "extractedTextPath": "state/extracts/toppingservice-465aac16.md",
+  "extractedMetadataPath": "state/extracts/toppingservice-465aac16.json",
+  "extractionHash": "a0d9ebe2afbb7f49e5a5fa393f40ee0e8b45de3200f92590c878a35108f88a06",
+  "mimeType": "text/javascript",
+  "contentHash": "465aac169ca5d5c8378cdf3f9171605556397834df67e04868872819dd87cfad",
+  "semanticHash": "465aac169ca5d5c8378cdf3f9171605556397834df67e04868872819dd87cfad",
+  "createdAt": "2026-05-03T15:02:31.585Z",
+  "updatedAt": "2026-05-03T15:02:31.585Z"
+}

@@ -1,0 +1,112 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "appheader-4f7f0a62",
+  "sourceHash": "4f7f0a62a210ae49dffd1758bcb09f32c445e34f0b5687142da107f91f8fb44b",
+  "semanticHash": "4f7f0a62a210ae49dffd1758bcb09f32c445e34f0b5687142da107f91f8fb44b",
+  "extractionHash": "f396ed97e2686ffc0e6a37822ff12772df52b9beb210756d8ea791119a230afd",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "AppHeader",
+  "summary": "AppHeader is a vue module, defining 4 top-level symbol(s), exporting 2 symbol(s), depending on 1 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:appheader-4f7f0a62:1",
+      "text": "AppHeader exports AppHeader, RouterLink.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "appheader-4f7f0a62"
+    },
+    {
+      "id": "claim:appheader-4f7f0a62:2",
+      "text": "AppHeader defines AppHeader, RouterLink, isMenuOpen, navLinks.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "appheader-4f7f0a62"
+    },
+    {
+      "id": "claim:appheader-4f7f0a62:3",
+      "text": "AppHeader imports vue.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "appheader-4f7f0a62"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how AppHeader exports are consumed?",
+    "Why does AppHeader depend on vue?",
+    "What broader responsibility does AppHeader serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:appheader-4f7f0a62",
+    "language": "vue",
+    "moduleName": "frontend/src/components/AppHeader",
+    "imports": [
+      {
+        "specifier": "vue",
+        "importedSymbols": [
+          "ref"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "vue"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:appheader-4f7f0a62:appheader.class",
+        "name": "AppHeader",
+        "kind": "class",
+        "signature": "vue component AppHeader",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:appheader-4f7f0a62:routerlink.class",
+        "name": "RouterLink",
+        "kind": "class",
+        "signature": "<RouterLink to=\"/\" class=\"flex items-center space-x-2\">",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:appheader-4f7f0a62:ismenuopen.variable",
+        "name": "isMenuOpen",
+        "kind": "variable",
+        "signature": "const isMenuOpen = ref(false)",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:appheader-4f7f0a62:navlinks.variable",
+        "name": "navLinks",
+        "kind": "variable",
+        "signature": "const navLinks = [ { name: '首頁', path: '/' }, { name: '菜單', path: '/menu' }, { name: 'AI 推薦', path: '/ai-recommend' }, { name: '購物車', path: '/cart' } ]",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "AppHeader",
+      "RouterLink"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:59.186Z"
+}

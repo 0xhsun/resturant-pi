@@ -1,0 +1,19 @@
+{
+  "sourceId": "orders-2ab28be4",
+  "title": "orders",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/src/routes/orders.js",
+  "repoRelativePath": "backend/src/routes/orders.js",
+  "storedPath": "raw/sources/orders-2ab28be4.js",
+  "extractedTextPath": "state/extracts/orders-2ab28be4.md",
+  "extractedMetadataPath": "state/extracts/orders-2ab28be4.json",
+  "extractionHash": "8866f746a27dd91453be1b59313700cd748b8761d3b5f41ed8eb112efd61c4f2",
+  "mimeType": "text/javascript",
+  "contentHash": "2ab28be4aa864b4875645cd9b3b4a788c5f8b743a96aaaeaaf5cd72e54792e7a",
+  "semanticHash": "2ab28be4aa864b4875645cd9b3b4a788c5f8b743a96aaaeaaf5cd72e54792e7a",
+  "createdAt": "2026-05-03T15:02:29.371Z",
+  "updatedAt": "2026-05-03T15:02:29.371Z"
+}

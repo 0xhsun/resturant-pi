@@ -1,0 +1,19 @@
+{
+  "sourceId": "kimi-openai-bacf808f",
+  "title": "kimi-openai",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/src/config/kimi-openai.js",
+  "repoRelativePath": "backend/src/config/kimi-openai.js",
+  "storedPath": "raw/sources/kimi-openai-bacf808f.js",
+  "extractedTextPath": "state/extracts/kimi-openai-bacf808f.md",
+  "extractedMetadataPath": "state/extracts/kimi-openai-bacf808f.json",
+  "extractionHash": "afb362343949d5c1e4f35e658919ed6a3ddc34b12023e14a99aa02f5f3af12c2",
+  "mimeType": "text/javascript",
+  "contentHash": "bacf808fc2379830a3b0ab625229f60ba9a4ccb8a4b055e3f0a0d6d92e0e4ec4",
+  "semanticHash": "bacf808fc2379830a3b0ab625229f60ba9a4ccb8a4b055e3f0a0d6d92e0e4ec4",
+  "createdAt": "2026-05-03T15:02:27.057Z",
+  "updatedAt": "2026-05-03T15:02:27.057Z"
+}

@@ -1,0 +1,41 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "postcss-config-096ec8db",
+  "sourceHash": "096ec8db734319974f2c154ad88660ac084688a42382ab38e3792f332d09e969",
+  "semanticHash": "096ec8db734319974f2c154ad88660ac084688a42382ab38e3792f332d09e969",
+  "extractionHash": "677189b1017f72da3c861dbed9132d174202511cfc3621056463de1b18f65242",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "postcss.config",
+  "summary": "postcss.config is a javascript module, defining 0 top-level symbol(s), exporting 0 symbol(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:postcss-config-096ec8db:1",
+      "text": "postcss.config exports default.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "postcss-config-096ec8db"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how postcss.config exports are consumed?",
+    "What broader responsibility does postcss.config serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:postcss-config-096ec8db",
+    "language": "javascript",
+    "moduleName": "frontend/postcss.config",
+    "imports": [],
+    "dependencies": [],
+    "symbols": [],
+    "exports": [
+      "default"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.683Z"
+}

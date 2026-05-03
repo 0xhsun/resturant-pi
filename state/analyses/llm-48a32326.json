@@ -1,0 +1,96 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "llm-48a32326",
+  "sourceHash": "48a323269e69cfe3d564e6a9dbe44a3efc910106c557f8a36b5765f887708b5d",
+  "semanticHash": "48a323269e69cfe3d564e6a9dbe44a3efc910106c557f8a36b5765f887708b5d",
+  "extractionHash": "a63ea3c6c29e7870df5c121a87883de84cf6058130cbc21be5554ee0426407dd",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "llm",
+  "summary": "llm is a javascript module, defining 1 top-level symbol(s), exporting 0 symbol(s), importing 1 local module(s), depending on 1 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:llm-48a32326:1",
+      "text": "llm exports default (router).",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "llm-48a32326"
+    },
+    {
+      "id": "claim:llm-48a32326:2",
+      "text": "llm defines router.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "llm-48a32326"
+    },
+    {
+      "id": "claim:llm-48a32326:3",
+      "text": "llm imports express, ../services/llmService.js.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "llm-48a32326"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how llm exports are consumed?",
+    "How does llm coordinate with its imported local modules?",
+    "Why does llm depend on express?",
+    "What broader responsibility does llm serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:llm-48a32326",
+    "language": "javascript",
+    "moduleName": "backend/src/routes/llm",
+    "imports": [
+      {
+        "specifier": "express",
+        "importedSymbols": [
+          "Router"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "../services/llmService.js",
+        "importedSymbols": [
+          "chatCompletion",
+          "simpleChat",
+          "streamChat",
+          "getAvailableModels"
+        ],
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "llmservice-c197b460",
+        "resolvedRepoPath": "backend/src/services/llmService.js"
+      }
+    ],
+    "dependencies": [
+      "express"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:llm-48a32326:router.variable",
+        "name": "router",
+        "kind": "variable",
+        "signature": "const router = Router();",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "default (router)"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.524Z"
+}

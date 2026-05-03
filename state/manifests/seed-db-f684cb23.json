@@ -1,0 +1,19 @@
+{
+  "sourceId": "seed-db-f684cb23",
+  "title": "seed-db",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/scripts/seed-db.js",
+  "repoRelativePath": "backend/scripts/seed-db.js",
+  "storedPath": "raw/sources/seed-db-f684cb23.js",
+  "extractedTextPath": "state/extracts/seed-db-f684cb23.md",
+  "extractedMetadataPath": "state/extracts/seed-db-f684cb23.json",
+  "extractionHash": "a0af6ca397ed6f8bacd34dd9734b0864805f5b9003fe01f9dd4f413b7049f0ea",
+  "mimeType": "text/javascript",
+  "contentHash": "f684cb23d732a94463b82b374273d543f5ed8adc0cf60dcd9a5c0b8bf3a0666b",
+  "semanticHash": "f684cb23d732a94463b82b374273d543f5ed8adc0cf60dcd9a5c0b8bf3a0666b",
+  "createdAt": "2026-05-03T15:02:26.411Z",
+  "updatedAt": "2026-05-03T15:02:26.411Z"
+}

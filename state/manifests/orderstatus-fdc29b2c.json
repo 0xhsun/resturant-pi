@@ -1,0 +1,19 @@
+{
+  "sourceId": "orderstatus-fdc29b2c",
+  "title": "OrderStatus",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "vue",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/views/OrderStatus.vue",
+  "repoRelativePath": "frontend/src/views/OrderStatus.vue",
+  "storedPath": "raw/sources/orderstatus-fdc29b2c.vue",
+  "extractedTextPath": "state/extracts/orderstatus-fdc29b2c.md",
+  "extractedMetadataPath": "state/extracts/orderstatus-fdc29b2c.json",
+  "extractionHash": "d541dbdd1a57748a95b77deda541d5109bb2e2f6e4fa1f090581a935df292edc",
+  "mimeType": "application/octet-stream",
+  "contentHash": "fdc29b2ca7f313fbb5eca972b627d5ee7cb406b190aa366c17676883c8ebf607",
+  "semanticHash": "fdc29b2ca7f313fbb5eca972b627d5ee7cb406b190aa366c17676883c8ebf607",
+  "createdAt": "2026-05-03T15:02:44.169Z",
+  "updatedAt": "2026-05-03T15:02:44.169Z"
+}

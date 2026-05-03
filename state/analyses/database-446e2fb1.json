@@ -1,0 +1,132 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "database-446e2fb1",
+  "sourceHash": "446e2fb19a8e23286ec760865f27562314547597bb6c32cc91ac4571d31a67e3",
+  "semanticHash": "446e2fb19a8e23286ec760865f27562314547597bb6c32cc91ac4571d31a67e3",
+  "extractionHash": "46d41e732e3842ef7e50f9efbf9efb7ece6b784e05dca742038a02c51a72119a",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "database",
+  "summary": "database is a javascript module, defining 5 top-level symbol(s), exporting 0 symbol(s), depending on 2 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:database-446e2fb1:1",
+      "text": "database exports pool, query, transaction, testConnection.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "database-446e2fb1"
+    },
+    {
+      "id": "claim:database-446e2fb1:2",
+      "text": "database defines dbConfig, pool, testConnection, query, transaction.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "database-446e2fb1"
+    },
+    {
+      "id": "claim:database-446e2fb1:3",
+      "text": "database imports mysql2/promise.js, dotenv.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "database-446e2fb1"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how database exports are consumed?",
+    "Why does database depend on mysql2/promise.js?",
+    "What broader responsibility does database serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:database-446e2fb1",
+    "language": "javascript",
+    "moduleName": "backend/src/config/database",
+    "imports": [
+      {
+        "specifier": "mysql2/promise.js",
+        "importedSymbols": [],
+        "defaultImport": "mysql",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "dotenv",
+        "importedSymbols": [],
+        "defaultImport": "dotenv",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "mysql2/promise.js",
+      "dotenv"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:database-446e2fb1:dbconfig.variable",
+        "name": "dbConfig",
+        "kind": "variable",
+        "signature": "const dbConfig = { host: process.env.DB_HOST || 'localhost', port: parseInt(process.env.DB_PORT) || 3306, user: process.env.DB_USER || 'root', password: process.env.DB_PASSWORD ...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:database-446e2fb1:pool.variable",
+        "name": "pool",
+        "kind": "variable",
+        "signature": "const pool = mysql.createPool(dbConfig);",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:database-446e2fb1:testconnection.variable",
+        "name": "testConnection",
+        "kind": "variable",
+        "signature": "const testConnection = async () => { try { const connection = await pool.getConnection(); console.log('✅ MySQL 資料庫連線成功'); connection.release(); return true; } catch (error) { co...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:database-446e2fb1:query.variable",
+        "name": "query",
+        "kind": "variable",
+        "signature": "const query = async (sql, params) => { const [rows] = await pool.execute(sql, params); return rows; };",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:database-446e2fb1:transaction.variable",
+        "name": "transaction",
+        "kind": "variable",
+        "signature": "const transaction = async (callback) => { const connection = await pool.getConnection(); await connection.beginTransaction(); try { const result = await callback(connection); aw...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "pool",
+      "query",
+      "transaction",
+      "testConnection"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.484Z"
+}

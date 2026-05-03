@@ -1,0 +1,19 @@
+{
+  "sourceId": "aiservice-ef45c47d",
+  "title": "aiService",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/src/services/aiService.js",
+  "repoRelativePath": "backend/src/services/aiService.js",
+  "storedPath": "raw/sources/aiservice-ef45c47d.js",
+  "extractedTextPath": "state/extracts/aiservice-ef45c47d.md",
+  "extractedMetadataPath": "state/extracts/aiservice-ef45c47d.json",
+  "extractionHash": "89a234bc835405b0203f20f6b9c7a51ed5e9f84047743f691f6de4bd8d0af840",
+  "mimeType": "text/javascript",
+  "contentHash": "ef45c47d85622ef865733babfc581fe03b0f2e1d4973041dc38090985156d285",
+  "semanticHash": "ef45c47d85622ef865733babfc581fe03b0f2e1d4973041dc38090985156d285",
+  "createdAt": "2026-05-03T15:02:29.968Z",
+  "updatedAt": "2026-05-03T15:02:29.968Z"
+}

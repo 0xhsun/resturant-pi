@@ -1,0 +1,18 @@
+{
+  "sourceId": "swarmvault-rules-cc0c02b9",
+  "title": "SwarmVault Rules",
+  "originType": "file",
+  "sourceKind": "markdown",
+  "sourceClass": "first_party",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/AGENTS.md",
+  "repoRelativePath": "AGENTS.md",
+  "storedPath": "raw/sources/swarmvault-rules-cc0c02b9.md",
+  "extractedTextPath": "state/extracts/swarmvault-rules-cc0c02b9.md",
+  "extractedMetadataPath": "state/extracts/swarmvault-rules-cc0c02b9.json",
+  "extractionHash": "2353bdad6c4c3d7b2dfd534eecdf0dbfff0484d4951db444a84794d8e213118c",
+  "mimeType": "text/markdown",
+  "contentHash": "cc0c02b9130c9acb5e3c1bf3016a53d981261f18f1daeefccc5cf93cdfc549ce",
+  "semanticHash": "eaea0fed258e59267b8dde108d57a39c9457ce6e5252c6c334ff030efde4990b",
+  "createdAt": "2026-05-03T15:02:25.645Z",
+  "updatedAt": "2026-05-03T15:02:25.645Z"
+}

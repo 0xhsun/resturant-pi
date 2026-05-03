@@ -1,0 +1,19 @@
+{
+  "sourceId": "index-291cd897",
+  "title": "index",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/router/index.js",
+  "repoRelativePath": "frontend/src/router/index.js",
+  "storedPath": "raw/sources/index-291cd897.js",
+  "extractedTextPath": "state/extracts/index-291cd897.md",
+  "extractedMetadataPath": "state/extracts/index-291cd897.json",
+  "extractionHash": "cece615369a3ef8c5435d719a3f11e887ccb8de9437142f5b3d8ba5d57d2accd",
+  "mimeType": "text/javascript",
+  "contentHash": "291cd8978a5c883fb4a0af7187b06810fe34dd1160d2e41a8e163df98eb4035c",
+  "semanticHash": "291cd8978a5c883fb4a0af7187b06810fe34dd1160d2e41a8e163df98eb4035c",
+  "createdAt": "2026-05-03T15:02:38.915Z",
+  "updatedAt": "2026-05-03T15:02:38.915Z"
+}

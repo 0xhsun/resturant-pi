@@ -1,0 +1,116 @@
+{
+  "analysisVersion": 8,
+  "sourceId": "ramen-shop-ordering-system-e4bd11fe",
+  "sourceHash": "e4bd11feda1a3bcee2db77b323216d42b2e997ef1fbc5e064f95f8bea0be5bf1",
+  "semanticHash": "4479eeaa46895cd8c4c09faf9497b6524d94bb45363ba994705f0054cf01ea44",
+  "extractionHash": "53c63de6feff2d19abe716da51e8ded7e23a39aa91ff832b0dc50fac81c33fe5",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "拉麵職人 - Ramen Shop Ordering System",
+  "summary": "拉麵職人 - Ramen Shop Ordering System 一個專業的拉麵店點餐系統，採用前後端分離架構。 ## 系統架構 ramen-shop/ ├── backend/ # Express.js + MySQL 後端 ├── frontend/ # Vue.js 3 + Tailwind CSS 前端 └── .pi/ # Agent 設定（本地運行時使用，不提交到 git） ## 技術棧 ### 後端 - Runtime : Node.js 18+ - Framework : Express.js 4.x - Database : MySQL 8.0 - AI : Moonshot Kimi API (kimi-k2.6) ### 前端 - Framework : Vue.js 3 (Composition API) - Build : Vite 5.x - State : Pinia - Styling : Tailwind CSS 3.x ## 功能特色 - 🍜 完整菜單瀏覽與分類 - 🛒 流暢的購物車與點餐流程 - ⚙️ 拉麵客製化選項（湯頭、麵條、配料等） - 🤖 AI 智能推薦與諮詢 - 📱 響應式設計，支援手機點餐 - 🔍 訂單狀態即時追蹤 ## 快速開始 ### 1. 安裝依賴 bash npm install ### 2. 設定環境變數 bash cp backend/.env.example backend/.env cp frontend/.env.example frontend/.env # 編輯 .env 檔案填入正確的資料庫和 API 金鑰 ### 3.",
+  "concepts": [
+    {
+      "id": "concept:backend",
+      "name": "backend",
+      "description": "Frequently referenced concept in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "concept:frontend",
+      "name": "frontend",
+      "description": "Frequently referenced concept in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "concept:post",
+      "name": "post",
+      "description": "Frequently referenced concept in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "concept:agent",
+      "name": "agent",
+      "description": "Frequently referenced concept in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "concept:bash",
+      "name": "bash",
+      "description": "Frequently referenced concept in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "concept:express",
+      "name": "express",
+      "description": "Frequently referenced concept in 拉麵職人 - Ramen Shop Ordering System."
+    }
+  ],
+  "entities": [
+    {
+      "id": "entity:express-js",
+      "name": "Express.js",
+      "description": "Named entity mentioned in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "entity:mysql",
+      "name": "MySQL",
+      "description": "Named entity mentioned in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "entity:vue-js",
+      "name": "Vue.js",
+      "description": "Named entity mentioned in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "entity:tailwind",
+      "name": "Tailwind",
+      "description": "Named entity mentioned in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "entity:agent",
+      "name": "Agent",
+      "description": "Named entity mentioned in 拉麵職人 - Ramen Shop Ordering System."
+    },
+    {
+      "id": "entity:runtime-node-js",
+      "name": "Runtime : Node.js",
+      "description": "Named entity mentioned in 拉麵職人 - Ramen Shop Ordering System."
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim:ramen-shop-ordering-system-e4bd11fe:1",
+      "text": "拉麵職人 - Ramen Shop Ordering System 一個專業的拉麵店點餐系統，採用前後端分離架構。 ## 系統架構 ramen-shop/ ├── backend/ # Express.js + MySQL 後端 ├── frontend/ # Vue.js 3 + Tailwind CSS 前端 └── .pi/ # Agent 設定（本地運行時使用，不提交到 git） ## 技術棧 ### 後端 - Runtime : Node.js 18+ - Framework : Express.js 4.x - Database : MySQL 8.0 - AI : Moonshot Kimi API (kimi-k2.6) ### 前端 - Framework : Vue.js 3 (Composition API) - Build : Vite 5.x - State : Pinia - Styling : Tailwind CSS 3.x ## 功能特色 - 🍜 完整菜單瀏覽與分類 - 🛒 流暢的購物車與點餐流程 - ⚙️ 拉麵客製化選項（湯頭、麵條、配料等） - 🤖 AI 智能推薦與諮詢 - 📱 響應式設計，支援手機點餐 - 🔍 訂單狀態即時追蹤 ## 快速開始 ### 1.",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "ramen-shop-ordering-system-e4bd11fe"
+    },
+    {
+      "id": "claim:ramen-shop-ordering-system-e4bd11fe:2",
+      "text": "安裝依賴 bash npm install ### 2.",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "ramen-shop-ordering-system-e4bd11fe"
+    },
+    {
+      "id": "claim:ramen-shop-ordering-system-e4bd11fe:3",
+      "text": "設定環境變數 bash cp backend/.env.example backend/.env cp frontend/.env.example frontend/.env # 編輯 .env 檔案填入正確的資料庫和 API 金鑰 ### 3.",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "ramen-shop-ordering-system-e4bd11fe"
+    },
+    {
+      "id": "claim:ramen-shop-ordering-system-e4bd11fe:4",
+      "text": "初始化資料庫 bash cd backend npm run db:init npm run db:seed ### 4.",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "ramen-shop-ordering-system-e4bd11fe"
+    }
+  ],
+  "questions": [
+    "How does backend relate to 拉麵職人 - Ramen Shop Ordering System?",
+    "How does frontend relate to 拉麵職人 - Ramen Shop Ordering System?",
+    "How does post relate to 拉麵職人 - Ramen Shop Ordering System?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "producedAt": "2026-05-03T15:02:53.706Z"
+}

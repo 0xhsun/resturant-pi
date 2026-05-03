@@ -1,0 +1,212 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "menu-90f68d67",
+  "sourceHash": "90f68d67b6e2475ae612d5e982509defc8db216a9b12d85516b93bab993a3388",
+  "semanticHash": "90f68d67b6e2475ae612d5e982509defc8db216a9b12d85516b93bab993a3388",
+  "extractionHash": "12b0b228fd409f6aeba3ad452d02ab386e0ecf7f2717de560031bcd35d681843",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "Menu",
+  "summary": "Menu is a vue module, defining 9 top-level symbol(s), exporting 3 symbol(s), depending on 6 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:menu-90f68d67:1",
+      "text": "Menu exports Menu, CategoryTabs, MenuCard.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menu-90f68d67"
+    },
+    {
+      "id": "claim:menu-90f68d67:2",
+      "text": "Menu defines Menu, CategoryTabs, MenuCard, router, menuStore, and more.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menu-90f68d67"
+    },
+    {
+      "id": "claim:menu-90f68d67:3",
+      "text": "Menu imports vue, vue-router, @/stores/menu, @/stores/cart, and more.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menu-90f68d67"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how Menu exports are consumed?",
+    "Why does Menu depend on vue?",
+    "What broader responsibility does Menu serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:menu-90f68d67",
+    "language": "vue",
+    "moduleName": "frontend/src/views/Menu",
+    "imports": [
+      {
+        "specifier": "vue",
+        "importedSymbols": [
+          "ref",
+          "computed"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "vue-router",
+        "importedSymbols": [
+          "useRouter"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@/stores/menu",
+        "importedSymbols": [
+          "useMenuStore"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@/stores/cart",
+        "importedSymbols": [
+          "useCartStore"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@/components/MenuCard.vue",
+        "importedSymbols": [],
+        "defaultImport": "MenuCard",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@/components/CategoryTabs.vue",
+        "importedSymbols": [],
+        "defaultImport": "CategoryTabs",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "vue",
+      "vue-router",
+      "@/stores/menu",
+      "@/stores/cart",
+      "@/components/MenuCard.vue",
+      "@/components/CategoryTabs.vue"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:menu-90f68d67:menu.class",
+        "name": "Menu",
+        "kind": "class",
+        "signature": "vue component Menu",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menu-90f68d67:categorytabs.class",
+        "name": "CategoryTabs",
+        "kind": "class",
+        "signature": "<CategoryTabs",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menu-90f68d67:menucard.class",
+        "name": "MenuCard",
+        "kind": "class",
+        "signature": "<MenuCard",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menu-90f68d67:router.variable",
+        "name": "router",
+        "kind": "variable",
+        "signature": "const router = useRouter()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menu-90f68d67:menustore.variable",
+        "name": "menuStore",
+        "kind": "variable",
+        "signature": "const menuStore = useMenuStore()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menu-90f68d67:cartstore.variable",
+        "name": "cartStore",
+        "kind": "variable",
+        "signature": "const cartStore = useCartStore()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menu-90f68d67:selectedcategory.variable",
+        "name": "selectedCategory",
+        "kind": "variable",
+        "signature": "const selectedCategory = ref(null)",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menu-90f68d67:filteredmenus.variable",
+        "name": "filteredMenus",
+        "kind": "variable",
+        "signature": "const filteredMenus = computed(() => { if (!selectedCategory.value) { return menuStore.menus } return menuStore.menus.filter(menu => menu.category_id === selectedCategory.value) })",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menu-90f68d67:handleaddtocart.variable",
+        "name": "handleAddToCart",
+        "kind": "variable",
+        "signature": "const handleAddToCart = (menu) => { // For simple items without customizations, add directly // For items with customizations, go to detail page if (menu.hasCustomizations) { ro...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "Menu",
+      "CategoryTabs",
+      "MenuCard"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:59.186Z"
+}

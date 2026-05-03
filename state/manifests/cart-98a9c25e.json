@@ -1,0 +1,19 @@
+{
+  "sourceId": "cart-98a9c25e",
+  "title": "cart",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/stores/cart.js",
+  "repoRelativePath": "frontend/src/stores/cart.js",
+  "storedPath": "raw/sources/cart-98a9c25e.js",
+  "extractedTextPath": "state/extracts/cart-98a9c25e.md",
+  "extractedMetadataPath": "state/extracts/cart-98a9c25e.json",
+  "extractionHash": "dac3e26b45095d0d5229426b9463e08d2640ef0dc1c04f5f4929ca004fdd6bf7",
+  "mimeType": "text/javascript",
+  "contentHash": "98a9c25e7751eebea9686b4e547f8734a448abd54a99fb8f7b027a939c0af14d",
+  "semanticHash": "98a9c25e7751eebea9686b4e547f8734a448abd54a99fb8f7b027a939c0af14d",
+  "createdAt": "2026-05-03T15:02:39.884Z",
+  "updatedAt": "2026-05-03T15:02:39.884Z"
+}

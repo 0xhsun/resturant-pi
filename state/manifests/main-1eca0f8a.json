@@ -1,0 +1,19 @@
+{
+  "sourceId": "main-1eca0f8a",
+  "title": "main",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/main.js",
+  "repoRelativePath": "frontend/src/main.js",
+  "storedPath": "raw/sources/main-1eca0f8a.js",
+  "extractedTextPath": "state/extracts/main-1eca0f8a.md",
+  "extractedMetadataPath": "state/extracts/main-1eca0f8a.json",
+  "extractionHash": "68d32743a187c4eff87630ca4ed5f3a1fda8b923202fba45a9d0f80e015be60e",
+  "mimeType": "text/javascript",
+  "contentHash": "1eca0f8a3d364402233c9e6a40a46d066e476740656a8df52d6396b3530c6509",
+  "semanticHash": "1eca0f8a3d364402233c9e6a40a46d066e476740656a8df52d6396b3530c6509",
+  "createdAt": "2026-05-03T15:02:38.441Z",
+  "updatedAt": "2026-05-03T15:02:38.441Z"
+}

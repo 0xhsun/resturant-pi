@@ -1,0 +1,24 @@
+{
+  "sourceId": "settings-17ae6091",
+  "title": "settings",
+  "originType": "file",
+  "sourceKind": "data",
+  "sourceClass": "first_party",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/.claude/settings.json",
+  "repoRelativePath": ".claude/settings.json",
+  "storedPath": "raw/sources/settings-17ae6091.json",
+  "extractedTextPath": "state/extracts/settings-17ae6091.md",
+  "extractedMetadataPath": "state/extracts/settings-17ae6091.json",
+  "extractionHash": "4722d42f2428bf413596585ab303b200237659f5df8bf0739ece5a1d5660e3c1",
+  "mimeType": "application/json",
+  "contentHash": "17ae6091f27890f6506be21354e0a806de793ac933011a929c02a3995acacf82",
+  "semanticHash": "17ae6091f27890f6506be21354e0a806de793ac933011a929c02a3995acacf82",
+  "details": {
+    "format": "json",
+    "top_level_type": "object",
+    "top_level_size": "1",
+    "nested_depth": "6"
+  },
+  "createdAt": "2026-05-03T15:02:24.785Z",
+  "updatedAt": "2026-05-03T15:02:24.785Z"
+}

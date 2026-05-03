@@ -1,0 +1,19 @@
+{
+  "sourceId": "api-026fca87",
+  "title": "api",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/services/api.js",
+  "repoRelativePath": "frontend/src/services/api.js",
+  "storedPath": "raw/sources/api-026fca87.js",
+  "extractedTextPath": "state/extracts/api-026fca87.md",
+  "extractedMetadataPath": "state/extracts/api-026fca87.json",
+  "extractionHash": "181724ee6cba80b71c1734bbc658bddd2bb2716d8c53ddfcb79d5a3de3b44ed6",
+  "mimeType": "text/javascript",
+  "contentHash": "026fca875026af169f1a56475676fbf8f8523f8eb57a76f7191f365f9e1e538c",
+  "semanticHash": "026fca875026af169f1a56475676fbf8f8523f8eb57a76f7191f365f9e1e538c",
+  "createdAt": "2026-05-03T15:02:39.394Z",
+  "updatedAt": "2026-05-03T15:02:39.394Z"
+}

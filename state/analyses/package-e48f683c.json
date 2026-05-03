@@ -1,0 +1,61 @@
+{
+  "analysisVersion": 8,
+  "sourceId": "package-e48f683c",
+  "sourceHash": "e48f683cf679f8fc9bb085118ee1dddb95d256761f9ed78efdecb25c5243bae0",
+  "semanticHash": "e48f683cf679f8fc9bb085118ee1dddb95d256761f9ed78efdecb25c5243bae0",
+  "extractionHash": "4d7d6745a308fc675c79a027bcae7b757952b06f762de0f4c7904fe89a833a22",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "package",
+  "summary": "{ \"name\": \"ramen-shop\", \"version\": \"1.0.0\", \"description\": \"拉麵店點餐系統 - 前後端分離架構\", \"private\": true, \"workspaces\": [ \"backend\", \"frontend\" ], \"scripts\": { \"dev\": \"concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\" \"npm run dev -w backend\" \"npm run dev -w frontend\"\", \"build\": \"npm run build -w frontend\", \"start\": \"npm run start -w backend\" }, \"devDependencies\": { \"concurrently\": \"^8.2.2\" }, \"engines\": { \"node\": \">=18.0.0\" } }",
+  "concepts": [
+    {
+      "id": "concept:backend",
+      "name": "backend",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:frontend",
+      "name": "frontend",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:build",
+      "name": "build",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:concurrently",
+      "name": "concurrently",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:start",
+      "name": "start",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:blue",
+      "name": "blue",
+      "description": "Frequently referenced concept in package."
+    }
+  ],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:package-e48f683c:1",
+      "text": "{ \"name\": \"ramen-shop\", \"version\": \"1.0.0\", \"description\": \"拉麵店點餐系統 - 前後端分離架構\", \"private\": true, \"workspaces\": [ \"backend\", \"frontend\" ], \"scripts\": { \"dev\": \"concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\" \"npm run dev -w backend\" \"npm run dev -w frontend\"\", \"build\": \"npm run build -w frontend\", \"start\": \"npm run start -w backend\" }, \"devDependencies\": { \"concurrently\": \"^8.2.2\" }, \"engines\": { \"node\": \">=18.0.0\" } }",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "package-e48f683c"
+    }
+  ],
+  "questions": [
+    "How does backend relate to package?",
+    "How does frontend relate to package?",
+    "How does build relate to package?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "producedAt": "2026-05-03T15:02:53.689Z"
+}

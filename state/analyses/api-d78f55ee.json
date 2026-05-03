@@ -1,0 +1,56 @@
+{
+  "analysisVersion": 8,
+  "sourceId": "api-d78f55ee",
+  "sourceHash": "d78f55eecdd5478d8f1402a4788586b91ead95c3dacd9a5c34c547e372d4ea7e",
+  "semanticHash": "d78f55eecdd5478d8f1402a4788586b91ead95c3dacd9a5c34c547e372d4ea7e",
+  "extractionHash": "3236802b9f8a8fefd77ab78805254f801deb1d5bd36260ef63c9ea1d6e653b13",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "API 設定",
+  "summary": "API 設定 VITE_API_URL=http://localhost:3001/api # 環境設定 VITE_APP_ENV=development",
+  "concepts": [
+    {
+      "id": "concept:vite",
+      "name": "vite",
+      "description": "Frequently referenced concept in API 設定."
+    },
+    {
+      "id": "concept:3001",
+      "name": "3001",
+      "description": "Frequently referenced concept in API 設定."
+    },
+    {
+      "id": "concept:development",
+      "name": "development",
+      "description": "Frequently referenced concept in API 設定."
+    },
+    {
+      "id": "concept:http",
+      "name": "http",
+      "description": "Frequently referenced concept in API 設定."
+    },
+    {
+      "id": "concept:localhost",
+      "name": "localhost",
+      "description": "Frequently referenced concept in API 設定."
+    }
+  ],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:api-d78f55ee:1",
+      "text": "API 設定 VITE_API_URL=http://localhost:3001/api # 環境設定 VITE_APP_ENV=development",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "api-d78f55ee"
+    }
+  ],
+  "questions": [
+    "How does vite relate to API 設定?",
+    "How does 3001 relate to API 設定?",
+    "How does development relate to API 設定?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "producedAt": "2026-05-03T15:02:53.396Z"
+}

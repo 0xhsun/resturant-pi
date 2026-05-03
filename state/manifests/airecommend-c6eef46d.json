@@ -1,0 +1,19 @@
+{
+  "sourceId": "airecommend-c6eef46d",
+  "title": "AIRecommend",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "vue",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/views/AIRecommend.vue",
+  "repoRelativePath": "frontend/src/views/AIRecommend.vue",
+  "storedPath": "raw/sources/airecommend-c6eef46d.vue",
+  "extractedTextPath": "state/extracts/airecommend-c6eef46d.md",
+  "extractedMetadataPath": "state/extracts/airecommend-c6eef46d.json",
+  "extractionHash": "18e61db1dee899b0f72a1c3234776d91a08e64b58038b0b9ce527ad6e3293497",
+  "mimeType": "application/octet-stream",
+  "contentHash": "c6eef46da0da1f2c71251a4160007b512ce2df7c532869341412298686f00940",
+  "semanticHash": "c6eef46da0da1f2c71251a4160007b512ce2df7c532869341412298686f00940",
+  "createdAt": "2026-05-03T15:02:41.428Z",
+  "updatedAt": "2026-05-03T15:02:41.428Z"
+}

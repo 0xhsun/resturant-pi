@@ -1,0 +1,104 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "seed-db-f684cb23",
+  "sourceHash": "f684cb23d732a94463b82b374273d543f5ed8adc0cf60dcd9a5c0b8bf3a0666b",
+  "semanticHash": "f684cb23d732a94463b82b374273d543f5ed8adc0cf60dcd9a5c0b8bf3a0666b",
+  "extractionHash": "a0af6ca397ed6f8bacd34dd9734b0864805f5b9003fe01f9dd4f413b7049f0ea",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "seed-db",
+  "summary": "seed-db is a javascript module, defining 4 top-level symbol(s), exporting 0 symbol(s), importing 1 local module(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:seed-db-f684cb23:1",
+      "text": "seed-db defines seedMenus, seedToppings, seedCustomizations, seed.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "seed-db-f684cb23"
+    },
+    {
+      "id": "claim:seed-db-f684cb23:2",
+      "text": "seed-db imports ../src/config/database.js.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "seed-db-f684cb23"
+    }
+  ],
+  "questions": [
+    "How does seed-db coordinate with its imported local modules?",
+    "What broader responsibility does seed-db serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:seed-db-f684cb23",
+    "language": "javascript",
+    "moduleName": "backend/scripts/seed-db",
+    "imports": [
+      {
+        "specifier": "../src/config/database.js",
+        "importedSymbols": [
+          "query"
+        ],
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "database-446e2fb1",
+        "resolvedRepoPath": "backend/src/config/database.js"
+      }
+    ],
+    "dependencies": [],
+    "symbols": [
+      {
+        "id": "symbol:seed-db-f684cb23:seedmenus.variable",
+        "name": "seedMenus",
+        "kind": "variable",
+        "signature": "const seedMenus = async () => { const menus = [ // 豚骨系列 { name: '濃厚豚骨拉麵', name_en: 'Rich Tonkotsu Ramen', description: '使用豬大骨慢熬 12 小時的濃郁湯頭，搭配厚切叉燒與溏心蛋，是店內招牌人氣商品。', price: 280, im...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:seed-db-f684cb23:seedtoppings.variable",
+        "name": "seedToppings",
+        "kind": "variable",
+        "signature": "const seedToppings = async () => { const toppings = [ { name: '叉燒肉 (2片)', price: 50 }, { name: '溏心蛋', price: 30 }, { name: '筍乾', price: 20 }, { name: '海苔 (3片)', price: 20 }, { n...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:seed-db-f684cb23:seedcustomizations.variable",
+        "name": "seedCustomizations",
+        "kind": "variable",
+        "signature": "const seedCustomizations = async () => { const options = [ // 湯頭濃度 { category: 'soup', name: '清淡', display_order: 1 }, { category: 'soup', name: '標準', display_order: 2 }, { cate...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:seed-db-f684cb23:seed.variable",
+        "name": "seed",
+        "kind": "variable",
+        "signature": "const seed = async () => { try { console.log('🚀 開始建立種子資料...'); await seedMenus(); await seedToppings(); await seedCustomizations(); console.log('✨ 種子資料建立完成！'); process.exit(0);...",
+        "exported": false,
+        "calls": [
+          "seedMenus",
+          "seedToppings",
+          "seedCustomizations"
+        ],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.710Z"
+}

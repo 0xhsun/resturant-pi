@@ -1,0 +1,110 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "main-1eca0f8a",
+  "sourceHash": "1eca0f8a3d364402233c9e6a40a46d066e476740656a8df52d6396b3530c6509",
+  "semanticHash": "1eca0f8a3d364402233c9e6a40a46d066e476740656a8df52d6396b3530c6509",
+  "extractionHash": "68d32743a187c4eff87630ca4ed5f3a1fda8b923202fba45a9d0f80e015be60e",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "main",
+  "summary": "main is a javascript module, defining 1 top-level symbol(s), exporting 0 symbol(s), importing 3 local module(s), depending on 2 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:main-1eca0f8a:1",
+      "text": "main defines app.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "main-1eca0f8a"
+    },
+    {
+      "id": "claim:main-1eca0f8a:2",
+      "text": "main imports vue, pinia, ./App.vue, ./router, and more.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "main-1eca0f8a"
+    }
+  ],
+  "questions": [
+    "How does main coordinate with its imported local modules?",
+    "Why does main depend on vue?",
+    "What broader responsibility does main serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:main-1eca0f8a",
+    "language": "javascript",
+    "moduleName": "frontend/src/main",
+    "imports": [
+      {
+        "specifier": "vue",
+        "importedSymbols": [
+          "createApp"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "pinia",
+        "importedSymbols": [
+          "createPinia"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "./App.vue",
+        "importedSymbols": [],
+        "defaultImport": "App",
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "app-cbcbd37b",
+        "resolvedRepoPath": "frontend/src/App.vue"
+      },
+      {
+        "specifier": "./router",
+        "importedSymbols": [],
+        "defaultImport": "router",
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "index-291cd897",
+        "resolvedRepoPath": "frontend/src/router/index.js"
+      },
+      {
+        "specifier": "./assets/css/main.css",
+        "importedSymbols": [],
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "main-e09ade88",
+        "resolvedRepoPath": "frontend/src/assets/css/main.css"
+      }
+    ],
+    "dependencies": [
+      "vue",
+      "pinia"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:main-1eca0f8a:app.variable",
+        "name": "app",
+        "kind": "variable",
+        "signature": "const app = createApp(App)",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.607Z"
+}

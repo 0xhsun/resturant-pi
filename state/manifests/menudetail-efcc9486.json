@@ -1,0 +1,19 @@
+{
+  "sourceId": "menudetail-efcc9486",
+  "title": "MenuDetail",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "vue",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/views/MenuDetail.vue",
+  "repoRelativePath": "frontend/src/views/MenuDetail.vue",
+  "storedPath": "raw/sources/menudetail-efcc9486.vue",
+  "extractedTextPath": "state/extracts/menudetail-efcc9486.md",
+  "extractedMetadataPath": "state/extracts/menudetail-efcc9486.json",
+  "extractionHash": "a5b689384a3724195055b568ab1ace238dc2f8564064ca21d6969cf8f55c7897",
+  "mimeType": "application/octet-stream",
+  "contentHash": "efcc948644fb4c84fd0ba5e007c7465f23bd4d19ae18376a810be76120ee84c2",
+  "semanticHash": "efcc948644fb4c84fd0ba5e007c7465f23bd4d19ae18376a810be76120ee84c2",
+  "createdAt": "2026-05-03T15:02:43.615Z",
+  "updatedAt": "2026-05-03T15:02:43.615Z"
+}

@@ -1,0 +1,166 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "kimi-openai-bacf808f",
+  "sourceHash": "bacf808fc2379830a3b0ab625229f60ba9a4ccb8a4b055e3f0a0d6d92e0e4ec4",
+  "semanticHash": "bacf808fc2379830a3b0ab625229f60ba9a4ccb8a4b055e3f0a0d6d92e0e4ec4",
+  "extractionHash": "afb362343949d5c1e4f35e658919ed6a3ddc34b12023e14a99aa02f5f3af12c2",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "kimi-openai",
+  "summary": "kimi-openai is a javascript module, defining 8 top-level symbol(s), exporting 8 symbol(s), depending on 2 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:kimi-openai-bacf808f:1",
+      "text": "kimi-openai exports validateApiKey, kimiClient, KIMI_MODELS, MODEL_CONSTRAINTS, and more.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "kimi-openai-bacf808f"
+    },
+    {
+      "id": "claim:kimi-openai-bacf808f:2",
+      "text": "kimi-openai defines validateApiKey, kimiClient, KIMI_MODELS, MODEL_CONSTRAINTS, getValidTemperature, and more.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "kimi-openai-bacf808f"
+    },
+    {
+      "id": "claim:kimi-openai-bacf808f:3",
+      "text": "kimi-openai imports openai, dotenv.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "kimi-openai-bacf808f"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how kimi-openai exports are consumed?",
+    "Why does kimi-openai depend on openai?",
+    "What broader responsibility does kimi-openai serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:kimi-openai-bacf808f",
+    "language": "javascript",
+    "moduleName": "backend/src/config/kimi-openai",
+    "imports": [
+      {
+        "specifier": "openai",
+        "importedSymbols": [],
+        "defaultImport": "OpenAI",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "dotenv",
+        "importedSymbols": [],
+        "defaultImport": "dotenv",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "openai",
+      "dotenv"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:kimi-openai-bacf808f:validateapikey.function",
+        "name": "validateApiKey",
+        "kind": "function",
+        "signature": "export function validateApiKey()",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:kimi-openai-bacf808f:kimiclient.variable",
+        "name": "kimiClient",
+        "kind": "variable",
+        "signature": "export const kimiClient = new OpenAI({ apiKey: process.env.MOONSHOT_API_KEY, baseURL: 'https://api.moonshot.ai/v1', });",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:kimi-openai-bacf808f:kimi-models.variable",
+        "name": "KIMI_MODELS",
+        "kind": "variable",
+        "signature": "export const KIMI_MODELS = { // Kimi K2.6 系列 - 最新最強大多模態模型（推薦） // 注意: temperature 固定為 1，不可修改 KIMI_K2_6: 'kimi-k2.6', // Kimi K2.5 系列 KIMI_K2_5: 'kimi-k2.5', // Kimi K2 思考模型 KIMI_...",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:kimi-openai-bacf808f:model-constraints.variable",
+        "name": "MODEL_CONSTRAINTS",
+        "kind": "variable",
+        "signature": "export const MODEL_CONSTRAINTS = { 'kimi-k2.6': { temperature: { fixed: true, value: 1 }, top_p: { fixed: true, value: 0.95 }, description: 'temperature 固定為 1，top_p 固定為 0.95', }...",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:kimi-openai-bacf808f:getvalidtemperature.function",
+        "name": "getValidTemperature",
+        "kind": "function",
+        "signature": "export function getValidTemperature(modelId, requestedTemp = 0.7)",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:kimi-openai-bacf808f:getvalidtopp.function",
+        "name": "getValidTopP",
+        "kind": "function",
+        "signature": "export function getValidTopP(modelId, requestedTopP = 1)",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:kimi-openai-bacf808f:llmoptions.variable",
+        "name": "llmOptions",
+        "kind": "variable",
+        "signature": "export const llmOptions = { defaultModel: KIMI_MODELS.DEFAULT, defaultTemperature: 0.7, defaultMaxTokens: 2048, defaultTopP: 1, };",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:kimi-openai-bacf808f:getmodeldescription.function",
+        "name": "getModelDescription",
+        "kind": "function",
+        "signature": "export function getModelDescription(modelId)",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "validateApiKey",
+      "kimiClient",
+      "KIMI_MODELS",
+      "MODEL_CONSTRAINTS",
+      "getValidTemperature",
+      "getValidTopP",
+      "llmOptions",
+      "getModelDescription"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.528Z"
+}

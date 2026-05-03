@@ -1,0 +1,19 @@
+{
+  "sourceId": "ai-539bffad",
+  "title": "ai",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/src/routes/ai.js",
+  "repoRelativePath": "backend/src/routes/ai.js",
+  "storedPath": "raw/sources/ai-539bffad.js",
+  "extractedTextPath": "state/extracts/ai-539bffad.md",
+  "extractedMetadataPath": "state/extracts/ai-539bffad.json",
+  "extractionHash": "d3c2ce9575549735e66eb94b9291cedb346b3f850734d3a576c89c387be762bf",
+  "mimeType": "text/javascript",
+  "contentHash": "539bffad1690bb015823ce327d5ccb7502987616275b7eb55e77eb1cb28b54fa",
+  "semanticHash": "539bffad1690bb015823ce327d5ccb7502987616275b7eb55e77eb1cb28b54fa",
+  "createdAt": "2026-05-03T15:02:28.545Z",
+  "updatedAt": "2026-05-03T15:02:28.545Z"
+}

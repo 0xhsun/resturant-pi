@@ -1,0 +1,151 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "test-llm-8210f894",
+  "sourceHash": "8210f894fb9bdb9b0e056275790baf95442a2060747b8219ab430a60898a7d08",
+  "semanticHash": "8210f894fb9bdb9b0e056275790baf95442a2060747b8219ab430a60898a7d08",
+  "extractionHash": "46f000a49128d4d0534918db6bf4debd8752e048393e4a4aa603b2263b2853ac",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "test-llm",
+  "summary": "test-llm is a javascript module, defining 6 top-level symbol(s), exporting 0 symbol(s), importing 2 local module(s), depending on 1 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:test-llm-8210f894:1",
+      "text": "test-llm defines testConnection, testModels, testSimpleChat, testChatCompletion, testDirectSDK, and more.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "test-llm-8210f894"
+    },
+    {
+      "id": "claim:test-llm-8210f894:2",
+      "text": "test-llm imports dotenv, ../src/services/llmService.js, ../src/config/kimi-openai.js.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "test-llm-8210f894"
+    }
+  ],
+  "questions": [
+    "How does test-llm coordinate with its imported local modules?",
+    "Why does test-llm depend on dotenv?",
+    "What broader responsibility does test-llm serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:test-llm-8210f894",
+    "language": "javascript",
+    "moduleName": "backend/scripts/test-llm",
+    "imports": [
+      {
+        "specifier": "dotenv",
+        "importedSymbols": [],
+        "defaultImport": "dotenv",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "../src/services/llmService.js",
+        "importedSymbols": [
+          "chatCompletion",
+          "simpleChat",
+          "getAvailableModels"
+        ],
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "llmservice-c197b460",
+        "resolvedRepoPath": "backend/src/services/llmService.js"
+      },
+      {
+        "specifier": "../src/config/kimi-openai.js",
+        "importedSymbols": [
+          "kimiClient",
+          "validateApiKey"
+        ],
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "kimi-openai-bacf808f",
+        "resolvedRepoPath": "backend/src/config/kimi-openai.js"
+      }
+    ],
+    "dependencies": [
+      "dotenv"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:test-llm-8210f894:testconnection.function",
+        "name": "testConnection",
+        "kind": "function",
+        "signature": "async function testConnection()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:test-llm-8210f894:testmodels.function",
+        "name": "testModels",
+        "kind": "function",
+        "signature": "async function testModels()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:test-llm-8210f894:testsimplechat.function",
+        "name": "testSimpleChat",
+        "kind": "function",
+        "signature": "async function testSimpleChat()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:test-llm-8210f894:testchatcompletion.function",
+        "name": "testChatCompletion",
+        "kind": "function",
+        "signature": "async function testChatCompletion()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:test-llm-8210f894:testdirectsdk.function",
+        "name": "testDirectSDK",
+        "kind": "function",
+        "signature": "async function testDirectSDK()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:test-llm-8210f894:runtests.function",
+        "name": "runTests",
+        "kind": "function",
+        "signature": "async function runTests()",
+        "exported": false,
+        "calls": [
+          "testConnection",
+          "testModels",
+          "testSimpleChat",
+          "testChatCompletion",
+          "testDirectSDK"
+        ],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:59.080Z"
+}

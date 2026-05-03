@@ -1,0 +1,67 @@
+{
+  "analysisVersion": 8,
+  "sourceId": "package-d79bf8d6",
+  "sourceHash": "d79bf8d6217bca36b9f02e4974b76e981cbfe598db97c32862d82b233a9da676",
+  "semanticHash": "d79bf8d6217bca36b9f02e4974b76e981cbfe598db97c32862d82b233a9da676",
+  "extractionHash": "ae4f78890e42ced94a25e40d510f1e9e495b23640b11530080f2c7a42b2e833a",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "package",
+  "summary": "{ \"name\": \"ramen-shop-backend\", \"version\": \"1.0.0\", \"description\": \"拉麵店點餐系統後端 - Express.js + MySQL\", \"type\": \"module\", \"main\": \"src/index.js\", \"scripts\": { \"start\": \"node src/index.js\", \"dev\": \"nodemon src/index.js\", \"init-db\": \"node scripts/init-db.js\", \"seed-db\": \"node scripts/seed-db.js\", \"setup-db\": \"npm run init-db && npm run seed-db\" }, \"dependencies\": { \"cors\": \"^2.8.5\", \"dotenv\": \"^16.3.1\", \"express\": \"^4.18.2\", \"helmet\": \"^7.1.0\", \"morgan\": \"^1.10.0\", \"mysql2\": \"^3.6.5\", \"openai\": \"^6.35.0\" }, \"devDependencies\": { \"nodemon\": \"^3.0.2\" }, \"keywords\": [ \"ramen\", \"restaurant\", \"express\", \"mysql\" ], \"author\": \"\", \"license\": \"MIT\" }",
+  "concepts": [
+    {
+      "id": "concept:express",
+      "name": "express",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:index",
+      "name": "index",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:init",
+      "name": "init",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:node",
+      "name": "node",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:scripts",
+      "name": "scripts",
+      "description": "Frequently referenced concept in package."
+    },
+    {
+      "id": "concept:seed",
+      "name": "seed",
+      "description": "Frequently referenced concept in package."
+    }
+  ],
+  "entities": [
+    {
+      "id": "entity:morgan",
+      "name": "\"morgan\":",
+      "description": "Named entity mentioned in package."
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim:package-d79bf8d6:1",
+      "text": "{ \"name\": \"ramen-shop-backend\", \"version\": \"1.0.0\", \"description\": \"拉麵店點餐系統後端 - Express.js + MySQL\", \"type\": \"module\", \"main\": \"src/index.js\", \"scripts\": { \"start\": \"node src/index.js\", \"dev\": \"nodemon src/index.js\", \"init-db\": \"node scripts/init-db.js\", \"seed-db\": \"node scripts/seed-db.js\", \"setup-db\": \"npm run init-db && npm run seed-db\" }, \"dependencies\": { \"cors\": \"^2.8.5\", \"dotenv\": \"^16.3.1\", \"express\": \"^4.18.2\", \"helmet\": \"^7.1.0\", \"morgan\": \"^1.10.0\", \"mysql2\": \"^3.6.5\", \"openai\": \"^6.35.0\" }, \"devDependencies\": { \"nodemon\": \"^3.0.2\" }, \"keywords\": [ \"ramen\", \"restaurant\", \"express\", \"mysql\" ], \"author\": \"\", \"license\": \"MIT\" }",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "package-d79bf8d6"
+    }
+  ],
+  "questions": [
+    "How does express relate to package?",
+    "How does index relate to package?",
+    "How does init relate to package?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "producedAt": "2026-05-03T15:02:53.673Z"
+}

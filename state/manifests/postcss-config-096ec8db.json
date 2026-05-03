@@ -1,0 +1,19 @@
+{
+  "sourceId": "postcss-config-096ec8db",
+  "title": "postcss.config",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/postcss.config.js",
+  "repoRelativePath": "frontend/postcss.config.js",
+  "storedPath": "raw/sources/postcss-config-096ec8db.js",
+  "extractedTextPath": "state/extracts/postcss-config-096ec8db.md",
+  "extractedMetadataPath": "state/extracts/postcss-config-096ec8db.json",
+  "extractionHash": "677189b1017f72da3c861dbed9132d174202511cfc3621056463de1b18f65242",
+  "mimeType": "text/javascript",
+  "contentHash": "096ec8db734319974f2c154ad88660ac084688a42382ab38e3792f332d09e969",
+  "semanticHash": "096ec8db734319974f2c154ad88660ac084688a42382ab38e3792f332d09e969",
+  "createdAt": "2026-05-03T15:02:34.171Z",
+  "updatedAt": "2026-05-03T15:02:34.171Z"
+}

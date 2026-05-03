@@ -1,0 +1,92 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "toppings-51550e79",
+  "sourceHash": "51550e793dd8248cb5d63b82bc4375f586bb7ff77e86932fcc4a6c6452e222ad",
+  "semanticHash": "51550e793dd8248cb5d63b82bc4375f586bb7ff77e86932fcc4a6c6452e222ad",
+  "extractionHash": "1115a46791bd307f2aba364b7b3a2e1e07bbb9258ed668b953573adaa69027c4",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "toppings",
+  "summary": "toppings is a javascript module, defining 1 top-level symbol(s), exporting 0 symbol(s), importing 1 local module(s), depending on 1 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:toppings-51550e79:1",
+      "text": "toppings exports default (router).",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "toppings-51550e79"
+    },
+    {
+      "id": "claim:toppings-51550e79:2",
+      "text": "toppings defines router.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "toppings-51550e79"
+    },
+    {
+      "id": "claim:toppings-51550e79:3",
+      "text": "toppings imports express, ../controllers/toppingController.js.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "toppings-51550e79"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how toppings exports are consumed?",
+    "How does toppings coordinate with its imported local modules?",
+    "Why does toppings depend on express?",
+    "What broader responsibility does toppings serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:toppings-51550e79",
+    "language": "javascript",
+    "moduleName": "backend/src/routes/toppings",
+    "imports": [
+      {
+        "specifier": "express",
+        "importedSymbols": [
+          "Router"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "../controllers/toppingController.js",
+        "importedSymbols": [],
+        "namespaceImport": "toppingController",
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "toppingcontroller-a74e3c3a",
+        "resolvedRepoPath": "backend/src/controllers/toppingController.js"
+      }
+    ],
+    "dependencies": [
+      "express"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:toppings-51550e79:router.variable",
+        "name": "router",
+        "kind": "variable",
+        "signature": "const router = Router();",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "default (router)"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:59.082Z"
+}

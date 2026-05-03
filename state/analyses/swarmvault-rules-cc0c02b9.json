@@ -1,0 +1,96 @@
+{
+  "analysisVersion": 8,
+  "sourceId": "swarmvault-rules-cc0c02b9",
+  "sourceHash": "cc0c02b9130c9acb5e3c1bf3016a53d981261f18f1daeefccc5cf93cdfc549ce",
+  "semanticHash": "eaea0fed258e59267b8dde108d57a39c9457ce6e5252c6c334ff030efde4990b",
+  "extractionHash": "2353bdad6c4c3d7b2dfd534eecdf0dbfff0484d4951db444a84794d8e213118c",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "SwarmVault Rules",
+  "summary": "<!-- swarmvault:managed:start --> # SwarmVault Rules - Read `swarmvault.schema.md` before compile or query style work. It is the canonical schema path. - Treat `raw/` as immutable source input.",
+  "concepts": [
+    {
+      "id": "concept:swarmvault",
+      "name": "swarmvault",
+      "description": "Frequently referenced concept in SwarmVault Rules."
+    },
+    {
+      "id": "concept:graph",
+      "name": "graph",
+      "description": "Frequently referenced concept in SwarmVault Rules."
+    },
+    {
+      "id": "concept:wiki",
+      "name": "wiki",
+      "description": "Frequently referenced concept in SwarmVault Rules."
+    },
+    {
+      "id": "concept:before",
+      "name": "before",
+      "description": "Frequently referenced concept in SwarmVault Rules."
+    },
+    {
+      "id": "concept:query",
+      "name": "query",
+      "description": "Frequently referenced concept in SwarmVault Rules."
+    },
+    {
+      "id": "concept:source",
+      "name": "source",
+      "description": "Frequently referenced concept in SwarmVault Rules."
+    }
+  ],
+  "entities": [
+    {
+      "id": "entity:swarmvault-rules-read",
+      "name": "SwarmVault Rules - Read",
+      "description": "Named entity mentioned in SwarmVault Rules."
+    },
+    {
+      "id": "entity:swarmvault",
+      "name": "SwarmVault",
+      "description": "Named entity mentioned in SwarmVault Rules."
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim:swarmvault-rules-cc0c02b9:1",
+      "text": "<!-- swarmvault:managed:start --> # SwarmVault Rules - Read `swarmvault.schema.md` before compile or query style work.",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "swarmvault-rules-cc0c02b9"
+    },
+    {
+      "id": "claim:swarmvault-rules-cc0c02b9:2",
+      "text": "It is the canonical schema path.",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "positive",
+      "citation": "swarmvault-rules-cc0c02b9"
+    },
+    {
+      "id": "claim:swarmvault-rules-cc0c02b9:3",
+      "text": "- Treat `raw/` as immutable source input.",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "swarmvault-rules-cc0c02b9"
+    },
+    {
+      "id": "claim:swarmvault-rules-cc0c02b9:4",
+      "text": "- Treat `wiki/` as generated markdown owned by the agent and compiler workflow.",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "swarmvault-rules-cc0c02b9"
+    }
+  ],
+  "questions": [
+    "How does swarmvault relate to SwarmVault Rules?",
+    "How does graph relate to SwarmVault Rules?",
+    "How does wiki relate to SwarmVault Rules?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "producedAt": "2026-05-03T15:02:59.062Z"
+}

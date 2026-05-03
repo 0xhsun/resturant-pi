@@ -1,0 +1,133 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "init-db-224d6199",
+  "sourceHash": "224d619991e390ba7f77817867b9bcfd99cbd58d4a8f1b81a523db295230b601",
+  "semanticHash": "224d619991e390ba7f77817867b9bcfd99cbd58d4a8f1b81a523db295230b601",
+  "extractionHash": "4d1d03e5cef1d42274ea634d38cd95474acef762062edc209ddd9ed1f1492830",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "init-db",
+  "summary": "init-db is a javascript module, defining 5 top-level symbol(s), exporting 0 symbol(s), importing 1 local module(s), depending on 2 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:init-db-224d6199:1",
+      "text": "init-db defines dbConfig, dbName, createDatabase, createTables, init.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "init-db-224d6199"
+    },
+    {
+      "id": "claim:init-db-224d6199:2",
+      "text": "init-db imports mysql2/promise, dotenv, ../src/config/database.js.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "init-db-224d6199"
+    }
+  ],
+  "questions": [
+    "How does init-db coordinate with its imported local modules?",
+    "Why does init-db depend on mysql2/promise?",
+    "What broader responsibility does init-db serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:init-db-224d6199",
+    "language": "javascript",
+    "moduleName": "backend/scripts/init-db",
+    "imports": [
+      {
+        "specifier": "mysql2/promise",
+        "importedSymbols": [],
+        "defaultImport": "mysql",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "dotenv",
+        "importedSymbols": [],
+        "defaultImport": "dotenv",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "../src/config/database.js",
+        "importedSymbols": [
+          "pool"
+        ],
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "database-446e2fb1",
+        "resolvedRepoPath": "backend/src/config/database.js"
+      }
+    ],
+    "dependencies": [
+      "mysql2/promise",
+      "dotenv"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:init-db-224d6199:dbconfig.variable",
+        "name": "dbConfig",
+        "kind": "variable",
+        "signature": "const dbConfig = { host: process.env.DB_HOST || 'localhost', port: parseInt(process.env.DB_PORT) || 3306, user: process.env.DB_USER || 'root', password: process.env.DB_PASSWORD ...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:init-db-224d6199:dbname.variable",
+        "name": "dbName",
+        "kind": "variable",
+        "signature": "const dbName = process.env.DB_NAME || 'ramen_shop';",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:init-db-224d6199:createdatabase.variable",
+        "name": "createDatabase",
+        "kind": "variable",
+        "signature": "const createDatabase = async () => { const connection = await mysql.createConnection(dbConfig); try { await connection.execute(`CREATE DATABASE IF NOT EXISTS ${dbName} CHARACTER...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:init-db-224d6199:createtables.variable",
+        "name": "createTables",
+        "kind": "variable",
+        "signature": "const createTables = async () => { const tables = [ // menus 表格 ` CREATE TABLE IF NOT EXISTS menus ( id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100) NOT NULL, name_en VARCH...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:init-db-224d6199:init.variable",
+        "name": "init",
+        "kind": "variable",
+        "signature": "const init = async () => { try { console.log('🚀 開始初始化資料庫...'); await createDatabase(); await createTables(); console.log('✨ 資料庫初始化完成！'); process.exit(0); } catch (err) { consol...",
+        "exported": false,
+        "calls": [
+          "createDatabase",
+          "createTables"
+        ],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.521Z"
+}

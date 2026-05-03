@@ -1,0 +1,19 @@
+{
+  "sourceId": "cart-fcbe2130",
+  "title": "Cart",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "vue",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/views/Cart.vue",
+  "repoRelativePath": "frontend/src/views/Cart.vue",
+  "storedPath": "raw/sources/cart-fcbe2130.vue",
+  "extractedTextPath": "state/extracts/cart-fcbe2130.md",
+  "extractedMetadataPath": "state/extracts/cart-fcbe2130.json",
+  "extractionHash": "3c1b03a18532b05e9324362b8c4e2d70c8c828a8d3dac2b1759edb776ac4b786",
+  "mimeType": "application/octet-stream",
+  "contentHash": "fcbe21301514a1cef05d271f0da613007986aa8d1efc09479044f1e96276d927",
+  "semanticHash": "fcbe21301514a1cef05d271f0da613007986aa8d1efc09479044f1e96276d927",
+  "createdAt": "2026-05-03T15:02:41.958Z",
+  "updatedAt": "2026-05-03T15:02:41.958Z"
+}

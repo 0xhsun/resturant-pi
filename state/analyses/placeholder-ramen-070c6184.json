@@ -1,0 +1,17 @@
+{
+  "analysisVersion": 8,
+  "sourceId": "placeholder-ramen-070c6184",
+  "sourceHash": "070c61847046119a7d26cf1888e0b3d9d2848b684258dfc08a1bc2e19207ba12",
+  "semanticHash": "070c61847046119a7d26cf1888e0b3d9d2848b684258dfc08a1bc2e19207ba12",
+  "extractionHash": "c1b8e26722ea098c5c7a0e9dee12f2a9739e54e0830b396a088a85940dfcb226",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "placeholder-ramen",
+  "summary": "Imported image source. Vision extraction unavailable for provider local. Configure a structured multimodal provider.",
+  "concepts": [],
+  "entities": [],
+  "claims": [],
+  "questions": [],
+  "tags": [],
+  "rationales": [],
+  "producedAt": "2026-05-03T15:02:53.294Z"
+}

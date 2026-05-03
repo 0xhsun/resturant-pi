@@ -1,0 +1,81 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "ordernumber-5c5f32af",
+  "sourceHash": "5c5f32afa7dba97033f949f8135825c1fcdbde67b034540087db6986525aca80",
+  "semanticHash": "5c5f32afa7dba97033f949f8135825c1fcdbde67b034540087db6986525aca80",
+  "extractionHash": "a1dda259e7805fe11a8ec3cafa7eaddea7ad4d0ac8b58db9c34a29d8466b60cf",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "orderNumber",
+  "summary": "orderNumber is a javascript module, defining 1 top-level symbol(s), exporting 0 symbol(s), importing 1 local module(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:ordernumber-5c5f32af:1",
+      "text": "orderNumber exports generateOrderNumber.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "ordernumber-5c5f32af"
+    },
+    {
+      "id": "claim:ordernumber-5c5f32af:2",
+      "text": "orderNumber defines generateOrderNumber.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "ordernumber-5c5f32af"
+    },
+    {
+      "id": "claim:ordernumber-5c5f32af:3",
+      "text": "orderNumber imports ../config/database.js.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "ordernumber-5c5f32af"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how orderNumber exports are consumed?",
+    "How does orderNumber coordinate with its imported local modules?",
+    "What broader responsibility does orderNumber serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:ordernumber-5c5f32af",
+    "language": "javascript",
+    "moduleName": "backend/src/utils/orderNumber",
+    "imports": [
+      {
+        "specifier": "../config/database.js",
+        "importedSymbols": [
+          "query"
+        ],
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "database-446e2fb1",
+        "resolvedRepoPath": "backend/src/config/database.js"
+      }
+    ],
+    "dependencies": [],
+    "symbols": [
+      {
+        "id": "symbol:ordernumber-5c5f32af:generateordernumber.variable",
+        "name": "generateOrderNumber",
+        "kind": "variable",
+        "signature": "const generateOrderNumber = async () => { const now = new Date(); const year = now.getFullYear(); const month = String(now.getMonth() + 1).padStart(2, '0'); const day = String(n...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "generateOrderNumber"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.660Z"
+}

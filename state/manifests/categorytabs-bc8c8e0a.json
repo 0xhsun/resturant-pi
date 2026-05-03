@@ -1,0 +1,19 @@
+{
+  "sourceId": "categorytabs-bc8c8e0a",
+  "title": "CategoryTabs",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "vue",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/components/CategoryTabs.vue",
+  "repoRelativePath": "frontend/src/components/CategoryTabs.vue",
+  "storedPath": "raw/sources/categorytabs-bc8c8e0a.vue",
+  "extractedTextPath": "state/extracts/categorytabs-bc8c8e0a.md",
+  "extractedMetadataPath": "state/extracts/categorytabs-bc8c8e0a.json",
+  "extractionHash": "0a51127dc658056621b7822dca69eb201839cd9155013fa6315a671d940fbd5c",
+  "mimeType": "application/octet-stream",
+  "contentHash": "bc8c8e0a246e28eea6d9b9af46765ace4a069f41707da5ceeb83534018f406c5",
+  "semanticHash": "bc8c8e0a246e28eea6d9b9af46765ace4a069f41707da5ceeb83534018f406c5",
+  "createdAt": "2026-05-03T15:02:37.518Z",
+  "updatedAt": "2026-05-03T15:02:37.518Z"
+}

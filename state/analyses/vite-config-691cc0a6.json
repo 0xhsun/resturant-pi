@@ -1,0 +1,81 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "vite-config-691cc0a6",
+  "sourceHash": "691cc0a60315900f19a7afd459180557125f3d400b0cf8982aac88d99d640d30",
+  "semanticHash": "691cc0a60315900f19a7afd459180557125f3d400b0cf8982aac88d99d640d30",
+  "extractionHash": "fc34d9a17b674ce44f5d1c8fd6ed8abdc1de281544e58dab6bf94013e19c416a",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "vite.config",
+  "summary": "vite.config is a javascript module, defining 0 top-level symbol(s), exporting 0 symbol(s), depending on 3 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:vite-config-691cc0a6:1",
+      "text": "vite.config exports default.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "vite-config-691cc0a6"
+    },
+    {
+      "id": "claim:vite-config-691cc0a6:2",
+      "text": "vite.config imports vite, @vitejs/plugin-vue, path.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "vite-config-691cc0a6"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how vite.config exports are consumed?",
+    "Why does vite.config depend on vite?",
+    "What broader responsibility does vite.config serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:vite-config-691cc0a6",
+    "language": "javascript",
+    "moduleName": "frontend/vite.config",
+    "imports": [
+      {
+        "specifier": "vite",
+        "importedSymbols": [
+          "defineConfig"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@vitejs/plugin-vue",
+        "importedSymbols": [],
+        "defaultImport": "vue",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "path",
+        "importedSymbols": [
+          "resolve"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "vite",
+      "@vitejs/plugin-vue",
+      "path"
+    ],
+    "symbols": [],
+    "exports": [
+      "default"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:59.083Z"
+}

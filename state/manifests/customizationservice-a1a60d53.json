@@ -1,0 +1,19 @@
+{
+  "sourceId": "customizationservice-a1a60d53",
+  "title": "customizationService",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/src/services/customizationService.js",
+  "repoRelativePath": "backend/src/services/customizationService.js",
+  "storedPath": "raw/sources/customizationservice-a1a60d53.js",
+  "extractedTextPath": "state/extracts/customizationservice-a1a60d53.md",
+  "extractedMetadataPath": "state/extracts/customizationservice-a1a60d53.json",
+  "extractionHash": "d6674c2890143383f763ab2ab72722d221617d1c3c4aa0c393d636d76ef3e1b8",
+  "mimeType": "text/javascript",
+  "contentHash": "a1a60d532f0288467a93ed4dfa198f7450919d42b3863b20b32c46980a59d311",
+  "semanticHash": "a1a60d532f0288467a93ed4dfa198f7450919d42b3863b20b32c46980a59d311",
+  "createdAt": "2026-05-03T15:02:30.277Z",
+  "updatedAt": "2026-05-03T15:02:30.277Z"
+}

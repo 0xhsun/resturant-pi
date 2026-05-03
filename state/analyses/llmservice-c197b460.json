@@ -1,0 +1,122 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "llmservice-c197b460",
+  "sourceHash": "c197b4601f5409a8116074879c3ffa8d2fb9f57fda13ddbc2158afbc262aa3c5",
+  "semanticHash": "c197b4601f5409a8116074879c3ffa8d2fb9f57fda13ddbc2158afbc262aa3c5",
+  "extractionHash": "0272e6c639e466c8e534243a1b0705ac293dc3af099d9b3fbc5c25e60a3b35d8",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "llmService",
+  "summary": "llmService is a javascript module, defining 4 top-level symbol(s), exporting 4 symbol(s), importing 1 local module(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:llmservice-c197b460:1",
+      "text": "llmService exports chatCompletion, simpleChat, streamChat, getAvailableModels.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "llmservice-c197b460"
+    },
+    {
+      "id": "claim:llmservice-c197b460:2",
+      "text": "llmService defines chatCompletion, simpleChat, streamChat, getAvailableModels.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "llmservice-c197b460"
+    },
+    {
+      "id": "claim:llmservice-c197b460:3",
+      "text": "llmService imports ../config/kimi-openai.js.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "llmservice-c197b460"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how llmService exports are consumed?",
+    "How does llmService coordinate with its imported local modules?",
+    "What broader responsibility does llmService serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:llmservice-c197b460",
+    "language": "javascript",
+    "moduleName": "backend/src/services/llmService",
+    "imports": [
+      {
+        "specifier": "../config/kimi-openai.js",
+        "importedSymbols": [
+          "kimiClient",
+          "validateApiKey",
+          "llmOptions",
+          "KIMI_MODELS",
+          "getModelDescription",
+          "getValidTemperature",
+          "getValidTopP"
+        ],
+        "isTypeOnly": false,
+        "isExternal": false,
+        "reExport": false,
+        "resolvedSourceId": "kimi-openai-bacf808f",
+        "resolvedRepoPath": "backend/src/config/kimi-openai.js"
+      }
+    ],
+    "dependencies": [],
+    "symbols": [
+      {
+        "id": "symbol:llmservice-c197b460:chatcompletion.function",
+        "name": "chatCompletion",
+        "kind": "function",
+        "signature": "export async function chatCompletion(messages, options = {})",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:llmservice-c197b460:simplechat.function",
+        "name": "simpleChat",
+        "kind": "function",
+        "signature": "export async function simpleChat(prompt, options = {})",
+        "exported": true,
+        "calls": [
+          "chatCompletion"
+        ],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:llmservice-c197b460:streamchat.function",
+        "name": "streamChat",
+        "kind": "function",
+        "signature": "export async function* streamChat(messages, options = {})",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:llmservice-c197b460:getavailablemodels.function",
+        "name": "getAvailableModels",
+        "kind": "function",
+        "signature": "export async function getAvailableModels()",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "chatCompletion",
+      "simpleChat",
+      "streamChat",
+      "getAvailableModels"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.606Z"
+}

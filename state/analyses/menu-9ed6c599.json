@@ -1,0 +1,104 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "menu-9ed6c599",
+  "sourceHash": "9ed6c599f5c9d03bb5e9825eac2a572d8f992f46531a99c2ca0202f239064de9",
+  "semanticHash": "9ed6c599f5c9d03bb5e9825eac2a572d8f992f46531a99c2ca0202f239064de9",
+  "extractionHash": "492dbfe2aae526843f62d6cc649ee91d5bca667be206f765e32cf931ab41fb44",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "menu",
+  "summary": "menu is a javascript module, defining 1 top-level symbol(s), exporting 1 symbol(s), depending on 3 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:menu-9ed6c599:1",
+      "text": "menu exports useMenuStore.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menu-9ed6c599"
+    },
+    {
+      "id": "claim:menu-9ed6c599:2",
+      "text": "menu defines useMenuStore.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menu-9ed6c599"
+    },
+    {
+      "id": "claim:menu-9ed6c599:3",
+      "text": "menu imports pinia, vue, @/services/api.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menu-9ed6c599"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how menu exports are consumed?",
+    "Why does menu depend on pinia?",
+    "What broader responsibility does menu serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:menu-9ed6c599",
+    "language": "javascript",
+    "moduleName": "frontend/src/stores/menu",
+    "imports": [
+      {
+        "specifier": "pinia",
+        "importedSymbols": [
+          "defineStore"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "vue",
+        "importedSymbols": [
+          "ref",
+          "computed"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@/services/api",
+        "importedSymbols": [
+          "menuApi",
+          "toppingApi",
+          "customizationApi"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "pinia",
+      "vue",
+      "@/services/api"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:menu-9ed6c599:usemenustore.variable",
+        "name": "useMenuStore",
+        "kind": "variable",
+        "signature": "export const useMenuStore = defineStore('menu', () => { // State const menus = ref([]) const categories = ref([]) const toppings = ref([]) const customizations = ref([]) const c...",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "useMenuStore"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.608Z"
+}

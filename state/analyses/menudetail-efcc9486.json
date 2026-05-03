@@ -1,0 +1,265 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "menudetail-efcc9486",
+  "sourceHash": "efcc948644fb4c84fd0ba5e007c7465f23bd4d19ae18376a810be76120ee84c2",
+  "semanticHash": "efcc948644fb4c84fd0ba5e007c7465f23bd4d19ae18376a810be76120ee84c2",
+  "extractionHash": "a5b689384a3724195055b568ab1ace238dc2f8564064ca21d6969cf8f55c7897",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "MenuDetail",
+  "summary": "MenuDetail is a vue module, defining 16 top-level symbol(s), exporting 2 symbol(s), depending on 4 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:menudetail-efcc9486:1",
+      "text": "MenuDetail exports MenuDetail, RouterLink.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menudetail-efcc9486"
+    },
+    {
+      "id": "claim:menudetail-efcc9486:2",
+      "text": "MenuDetail defines MenuDetail, RouterLink, route, router, menuStore, and more.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menudetail-efcc9486"
+    },
+    {
+      "id": "claim:menudetail-efcc9486:3",
+      "text": "MenuDetail imports vue, vue-router, @/stores/menu, @/stores/cart.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "menudetail-efcc9486"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how MenuDetail exports are consumed?",
+    "Why does MenuDetail depend on vue?",
+    "What broader responsibility does MenuDetail serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:menudetail-efcc9486",
+    "language": "vue",
+    "moduleName": "frontend/src/views/MenuDetail",
+    "imports": [
+      {
+        "specifier": "vue",
+        "importedSymbols": [
+          "ref",
+          "computed",
+          "onMounted"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "vue-router",
+        "importedSymbols": [
+          "useRoute",
+          "useRouter"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@/stores/menu",
+        "importedSymbols": [
+          "useMenuStore"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@/stores/cart",
+        "importedSymbols": [
+          "useCartStore"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "vue",
+      "vue-router",
+      "@/stores/menu",
+      "@/stores/cart"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:menudetail-efcc9486:menudetail.class",
+        "name": "MenuDetail",
+        "kind": "class",
+        "signature": "vue component MenuDetail",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:routerlink.class",
+        "name": "RouterLink",
+        "kind": "class",
+        "signature": "<RouterLink to=\"/menu\" class=\"text-accent hover:underline\">",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:route.variable",
+        "name": "route",
+        "kind": "variable",
+        "signature": "const route = useRoute()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:router.variable",
+        "name": "router",
+        "kind": "variable",
+        "signature": "const router = useRouter()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:menustore.variable",
+        "name": "menuStore",
+        "kind": "variable",
+        "signature": "const menuStore = useMenuStore()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:cartstore.variable",
+        "name": "cartStore",
+        "kind": "variable",
+        "signature": "const cartStore = useCartStore()",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:quantity.variable",
+        "name": "quantity",
+        "kind": "variable",
+        "signature": "const quantity = ref(1)",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:selectedoptions.variable",
+        "name": "selectedOptions",
+        "kind": "variable",
+        "signature": "const selectedOptions = ref({})",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:selectedtoppings.variable",
+        "name": "selectedToppings",
+        "kind": "variable",
+        "signature": "const selectedToppings = ref([])",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:menuid.variable",
+        "name": "menuId",
+        "kind": "variable",
+        "signature": "const menuId = computed(() => route.params.id)",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:menu.variable",
+        "name": "menu",
+        "kind": "variable",
+        "signature": "const menu = computed(() => menuStore.getMenuById(menuId.value) || menuStore.currentMenu)",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:customizations.variable",
+        "name": "customizations",
+        "kind": "variable",
+        "signature": "const customizations = ref([ { id: 1, name: '湯頭濃度', options: [ { id: 'light', name: '清淡', extraPrice: 0 }, { id: 'normal', name: '正常', extraPrice: 0 }, { id: 'rich', name: '濃厚',...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:totalprice.variable",
+        "name": "totalPrice",
+        "kind": "variable",
+        "signature": "const totalPrice = computed(() => { const basePrice = Number(menu.value?.price || 0) const toppingsPrice = selectedToppings.value.reduce((sum, t) => sum + Number(t.price || 0), ...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:toggletopping.variable",
+        "name": "toggleTopping",
+        "kind": "variable",
+        "signature": "const toggleTopping = (topping) => { const index = selectedToppings.value.findIndex(t => t.id === topping.id) if (index > -1) { selectedToppings.value.splice(index, 1) } else { ...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:addtocart.variable",
+        "name": "addToCart",
+        "kind": "variable",
+        "signature": "const addToCart = () => { if (!menu.value) return cartStore.addItem(menu.value, { quantity: quantity.value, customizations: selectedOptions.value, toppings: selectedToppings.val...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:menudetail-efcc9486:formatprice.variable",
+        "name": "formatPrice",
+        "kind": "variable",
+        "signature": "const formatPrice = (price) => { const n = Number(price) return isNaN(n) ? '0' : n.toLocaleString('zh-TW') }",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "MenuDetail",
+      "RouterLink"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:59.186Z"
+}

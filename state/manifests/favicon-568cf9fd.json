@@ -1,0 +1,17 @@
+{
+  "sourceId": "favicon-568cf9fd",
+  "title": "favicon",
+  "originType": "file",
+  "sourceKind": "image",
+  "sourceClass": "first_party",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/public/favicon.svg",
+  "repoRelativePath": "frontend/public/favicon.svg",
+  "storedPath": "raw/sources/favicon-568cf9fd.svg",
+  "extractedMetadataPath": "state/extracts/favicon-568cf9fd.json",
+  "extractionHash": "c8d59749f09ae9cf2af8656b379774df7220249539ead4570119c019d50e8932",
+  "mimeType": "image/svg+xml",
+  "contentHash": "568cf9fd3ab1526c7ded6c5afc6d952ed6dba2222338de717a562770b7c2a568",
+  "semanticHash": "568cf9fd3ab1526c7ded6c5afc6d952ed6dba2222338de717a562770b7c2a568",
+  "createdAt": "2026-05-03T15:02:34.574Z",
+  "updatedAt": "2026-05-03T15:02:34.574Z"
+}

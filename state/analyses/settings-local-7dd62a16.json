@@ -1,0 +1,92 @@
+{
+  "analysisVersion": 8,
+  "sourceId": "settings-local-7dd62a16",
+  "sourceHash": "7dd62a168dfab2a503f55595338105da238a23e0e86cbd8a61eb1371e96bc23f",
+  "semanticHash": "7dd62a168dfab2a503f55595338105da238a23e0e86cbd8a61eb1371e96bc23f",
+  "extractionHash": "94637670f6e66b27d5bade6c9de5f1f0e51c4e750be827c9d5429661c30ce813",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "settings.local",
+  "summary": "settings.local Format: JSON Top-level: object Size: 1 Nested depth: 3 ## Schema - permissions: object (1 keys) ## Preview json { \"permissions\": { \"allow\": [ \"WebFetch(domain:platform.kimi.ai)\" ] } }",
+  "concepts": [
+    {
+      "id": "concept:json",
+      "name": "json",
+      "description": "Frequently referenced concept in settings.local."
+    },
+    {
+      "id": "concept:object",
+      "name": "object",
+      "description": "Frequently referenced concept in settings.local."
+    },
+    {
+      "id": "concept:permissions",
+      "name": "permissions",
+      "description": "Frequently referenced concept in settings.local."
+    },
+    {
+      "id": "concept:allow",
+      "name": "allow",
+      "description": "Frequently referenced concept in settings.local."
+    },
+    {
+      "id": "concept:depth",
+      "name": "depth",
+      "description": "Frequently referenced concept in settings.local."
+    },
+    {
+      "id": "concept:domain",
+      "name": "domain",
+      "description": "Frequently referenced concept in settings.local."
+    }
+  ],
+  "entities": [
+    {
+      "id": "entity:format",
+      "name": "Format:",
+      "description": "Named entity mentioned in settings.local."
+    },
+    {
+      "id": "entity:top",
+      "name": "Top-",
+      "description": "Named entity mentioned in settings.local."
+    },
+    {
+      "id": "entity:size",
+      "name": "Size:",
+      "description": "Named entity mentioned in settings.local."
+    },
+    {
+      "id": "entity:nested",
+      "name": "Nested",
+      "description": "Named entity mentioned in settings.local."
+    },
+    {
+      "id": "entity:schema",
+      "name": "Schema -",
+      "description": "Named entity mentioned in settings.local."
+    },
+    {
+      "id": "entity:preview",
+      "name": "Preview",
+      "description": "Named entity mentioned in settings.local."
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim:settings-local-7dd62a16:1",
+      "text": "settings.local Format: JSON Top-level: object Size: 1 Nested depth: 3 ## Schema - permissions: object (1 keys) ## Preview json { \"permissions\": { \"allow\": [ \"WebFetch(domain:platform.kimi.ai)\" ] } }",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "settings-local-7dd62a16"
+    }
+  ],
+  "questions": [
+    "How does json relate to settings.local?",
+    "How does object relate to settings.local?",
+    "How does permissions relate to settings.local?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "producedAt": "2026-05-03T15:02:53.713Z"
+}

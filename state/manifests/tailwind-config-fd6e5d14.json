@@ -1,0 +1,19 @@
+{
+  "sourceId": "tailwind-config-fd6e5d14",
+  "title": "tailwind.config",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/tailwind.config.js",
+  "repoRelativePath": "frontend/tailwind.config.js",
+  "storedPath": "raw/sources/tailwind-config-fd6e5d14.js",
+  "extractedTextPath": "state/extracts/tailwind-config-fd6e5d14.md",
+  "extractedMetadataPath": "state/extracts/tailwind-config-fd6e5d14.json",
+  "extractionHash": "8c85ac7a02734c6c15a14dadb622da595bfc844abbad485c40ecd2717f92865c",
+  "mimeType": "text/javascript",
+  "contentHash": "fd6e5d14b1f7293e34fc54e324eaa309fe5b9cc765b60318c9e154501380da3e",
+  "semanticHash": "fd6e5d14b1f7293e34fc54e324eaa309fe5b9cc765b60318c9e154501380da3e",
+  "createdAt": "2026-05-03T15:02:44.767Z",
+  "updatedAt": "2026-05-03T15:02:44.767Z"
+}

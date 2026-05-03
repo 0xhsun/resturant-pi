@@ -1,0 +1,19 @@
+{
+  "sourceId": "orderservice-b1840729",
+  "title": "orderService",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/src/services/orderService.js",
+  "repoRelativePath": "backend/src/services/orderService.js",
+  "storedPath": "raw/sources/orderservice-b1840729.js",
+  "extractedTextPath": "state/extracts/orderservice-b1840729.md",
+  "extractedMetadataPath": "state/extracts/orderservice-b1840729.json",
+  "extractionHash": "63de039467bcee720f11b7a98b3d0b290e163e2bc8d346b2cb13f17ebbbc8c86",
+  "mimeType": "text/javascript",
+  "contentHash": "b18407294ca527f6f2e790e77811e612a8e60fa712f23320932292e6bec9f39d",
+  "semanticHash": "b18407294ca527f6f2e790e77811e612a8e60fa712f23320932292e6bec9f39d",
+  "createdAt": "2026-05-03T15:02:31.247Z",
+  "updatedAt": "2026-05-03T15:02:31.247Z"
+}

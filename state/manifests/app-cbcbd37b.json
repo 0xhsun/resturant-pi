@@ -1,0 +1,19 @@
+{
+  "sourceId": "app-cbcbd37b",
+  "title": "App",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "vue",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/App.vue",
+  "repoRelativePath": "frontend/src/App.vue",
+  "storedPath": "raw/sources/app-cbcbd37b.vue",
+  "extractedTextPath": "state/extracts/app-cbcbd37b.md",
+  "extractedMetadataPath": "state/extracts/app-cbcbd37b.json",
+  "extractionHash": "52218c55b6e02a836df7aae2889c379ea85f9f5da4a990f53a8499d924e77e6a",
+  "mimeType": "application/octet-stream",
+  "contentHash": "cbcbd37bf6d81b78d86dd011959f14ca15bcf132c96a842bec89aa12946117d6",
+  "semanticHash": "cbcbd37bf6d81b78d86dd011959f14ca15bcf132c96a842bec89aa12946117d6",
+  "createdAt": "2026-05-03T15:02:35.358Z",
+  "updatedAt": "2026-05-03T15:02:35.358Z"
+}

@@ -1,0 +1,60 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "categorytabs-bc8c8e0a",
+  "sourceHash": "bc8c8e0a246e28eea6d9b9af46765ace4a069f41707da5ceeb83534018f406c5",
+  "semanticHash": "bc8c8e0a246e28eea6d9b9af46765ace4a069f41707da5ceeb83534018f406c5",
+  "extractionHash": "0a51127dc658056621b7822dca69eb201839cd9155013fa6315a671d940fbd5c",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "CategoryTabs",
+  "summary": "CategoryTabs is a vue module, defining 1 top-level symbol(s), exporting 1 symbol(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:categorytabs-bc8c8e0a:1",
+      "text": "CategoryTabs exports CategoryTabs.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "categorytabs-bc8c8e0a"
+    },
+    {
+      "id": "claim:categorytabs-bc8c8e0a:2",
+      "text": "CategoryTabs defines CategoryTabs.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "categorytabs-bc8c8e0a"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how CategoryTabs exports are consumed?",
+    "What broader responsibility does CategoryTabs serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:categorytabs-bc8c8e0a",
+    "language": "vue",
+    "moduleName": "frontend/src/components/CategoryTabs",
+    "imports": [],
+    "dependencies": [],
+    "symbols": [
+      {
+        "id": "symbol:categorytabs-bc8c8e0a:categorytabs.class",
+        "name": "CategoryTabs",
+        "kind": "class",
+        "signature": "vue component CategoryTabs",
+        "exported": true,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "CategoryTabs"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:59.186Z"
+}

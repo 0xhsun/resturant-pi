@@ -1,0 +1,19 @@
+{
+  "sourceId": "main-e09ade88",
+  "title": "main",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "css",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/frontend/src/assets/css/main.css",
+  "repoRelativePath": "frontend/src/assets/css/main.css",
+  "storedPath": "raw/sources/main-e09ade88.css",
+  "extractedTextPath": "state/extracts/main-e09ade88.md",
+  "extractedMetadataPath": "state/extracts/main-e09ade88.json",
+  "extractionHash": "97105de8231001a2de53051eed1ed6d2348631d4f53fd832999dfcf897d2dec8",
+  "mimeType": "text/css",
+  "contentHash": "e09ade88b1fdd1adbc1aac99a114284846d5f735f99b025390b364a114f38e47",
+  "semanticHash": "e09ade88b1fdd1adbc1aac99a114284846d5f735f99b025390b364a114f38e47",
+  "createdAt": "2026-05-03T15:02:35.777Z",
+  "updatedAt": "2026-05-03T15:02:35.777Z"
+}

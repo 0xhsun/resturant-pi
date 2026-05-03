@@ -1,0 +1,19 @@
+{
+  "sourceId": "test-llm-8210f894",
+  "title": "test-llm",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/scripts/test-llm.js",
+  "repoRelativePath": "backend/scripts/test-llm.js",
+  "storedPath": "raw/sources/test-llm-8210f894.js",
+  "extractedTextPath": "state/extracts/test-llm-8210f894.md",
+  "extractedMetadataPath": "state/extracts/test-llm-8210f894.json",
+  "extractionHash": "46f000a49128d4d0534918db6bf4debd8752e048393e4a4aa603b2263b2853ac",
+  "mimeType": "text/javascript",
+  "contentHash": "8210f894fb9bdb9b0e056275790baf95442a2060747b8219ab430a60898a7d08",
+  "semanticHash": "8210f894fb9bdb9b0e056275790baf95442a2060747b8219ab430a60898a7d08",
+  "createdAt": "2026-05-03T15:02:26.619Z",
+  "updatedAt": "2026-05-03T15:02:26.619Z"
+}

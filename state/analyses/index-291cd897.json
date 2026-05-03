@@ -1,0 +1,101 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "index-291cd897",
+  "sourceHash": "291cd8978a5c883fb4a0af7187b06810fe34dd1160d2e41a8e163df98eb4035c",
+  "semanticHash": "291cd8978a5c883fb4a0af7187b06810fe34dd1160d2e41a8e163df98eb4035c",
+  "extractionHash": "cece615369a3ef8c5435d719a3f11e887ccb8de9437142f5b3d8ba5d57d2accd",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "index",
+  "summary": "index is a javascript module, defining 2 top-level symbol(s), exporting 0 symbol(s), depending on 2 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:index-291cd897:1",
+      "text": "index exports default (router).",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "index-291cd897"
+    },
+    {
+      "id": "claim:index-291cd897:2",
+      "text": "index defines routes, router.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "index-291cd897"
+    },
+    {
+      "id": "claim:index-291cd897:3",
+      "text": "index imports vue-router, @/views/Home.vue.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "index-291cd897"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how index exports are consumed?",
+    "Why does index depend on vue-router?",
+    "What broader responsibility does index serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:index-291cd897",
+    "language": "javascript",
+    "moduleName": "frontend/src/router",
+    "imports": [
+      {
+        "specifier": "vue-router",
+        "importedSymbols": [
+          "createRouter",
+          "createWebHistory"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "@/views/Home.vue",
+        "importedSymbols": [],
+        "defaultImport": "Home",
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "vue-router",
+      "@/views/Home.vue"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:index-291cd897:routes.variable",
+        "name": "routes",
+        "kind": "variable",
+        "signature": "const routes = [ { path: '/', name: 'Home', component: Home }, { path: '/menu', name: 'Menu', component: () => import('@/views/Menu.vue') }, { path: '/menu/:id', name: 'MenuDeta...",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:index-291cd897:router.variable",
+        "name": "router",
+        "kind": "variable",
+        "signature": "const router = createRouter({ history: createWebHistory(), routes, scrollBehavior() { return { top: 0 } } })",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "default (router)"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.502Z"
+}

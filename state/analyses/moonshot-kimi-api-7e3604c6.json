@@ -1,0 +1,61 @@
+{
+  "analysisVersion": 8,
+  "sourceId": "moonshot-kimi-api-7e3604c6",
+  "sourceHash": "7e3604c6a41a886bab76f062b85eaedc6fa50f050142eebbab4d34c9a5f2ed24",
+  "semanticHash": "7e3604c6a41a886bab76f062b85eaedc6fa50f050142eebbab4d34c9a5f2ed24",
+  "extractionHash": "d44d736782dd71686ee489a3dcbb738cad6c89da837d4f563e6679fbef38946d",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "Moonshot Kimi API",
+  "summary": "PORT=3001 DB_HOST=localhost DB_PORT=3306 DB_NAME=ramen_shop DB_USER=root DB_PASSWORD=password # Moonshot Kimi API # 獲取 API Key: https://platform.moonshot.ai MOONSHOT_API_KEY=your_moonshot_api_key_here CORS_ORIGIN=http://localhost:5173",
+  "concepts": [
+    {
+      "id": "concept:moonshot",
+      "name": "moonshot",
+      "description": "Frequently referenced concept in Moonshot Kimi API."
+    },
+    {
+      "id": "concept:localhost",
+      "name": "localhost",
+      "description": "Frequently referenced concept in Moonshot Kimi API."
+    },
+    {
+      "id": "concept:password",
+      "name": "password",
+      "description": "Frequently referenced concept in Moonshot Kimi API."
+    },
+    {
+      "id": "concept:port",
+      "name": "port",
+      "description": "Frequently referenced concept in Moonshot Kimi API."
+    },
+    {
+      "id": "concept:3001",
+      "name": "3001",
+      "description": "Frequently referenced concept in Moonshot Kimi API."
+    },
+    {
+      "id": "concept:3306",
+      "name": "3306",
+      "description": "Frequently referenced concept in Moonshot Kimi API."
+    }
+  ],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:moonshot-kimi-api-7e3604c6:1",
+      "text": "PORT=3001 DB_HOST=localhost DB_PORT=3306 DB_NAME=ramen_shop DB_USER=root DB_PASSWORD=password # Moonshot Kimi API # 獲取 API Key: https://platform.moonshot.ai MOONSHOT_API_KEY=your_moonshot_api_key_here CORS_ORIGIN=http://localhost:5173",
+      "confidence": 0.55,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "moonshot-kimi-api-7e3604c6"
+    }
+  ],
+  "questions": [
+    "How does moonshot relate to Moonshot Kimi API?",
+    "How does localhost relate to Moonshot Kimi API?",
+    "How does password relate to Moonshot Kimi API?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "producedAt": "2026-05-03T15:02:53.612Z"
+}

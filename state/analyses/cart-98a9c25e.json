@@ -1,0 +1,114 @@
+{
+  "analysisVersion": 7,
+  "sourceId": "cart-98a9c25e",
+  "sourceHash": "98a9c25e7751eebea9686b4e547f8734a448abd54a99fb8f7b027a939c0af14d",
+  "semanticHash": "98a9c25e7751eebea9686b4e547f8734a448abd54a99fb8f7b027a939c0af14d",
+  "extractionHash": "dac3e26b45095d0d5229426b9463e08d2640ef0dc1c04f5f4929ca004fdd6bf7",
+  "schemaHash": "874431dbbfdec0b254a4aa1bf002900574c9b485735a883690c2becb5f717720",
+  "title": "cart",
+  "summary": "cart is a javascript module, defining 3 top-level symbol(s), exporting 1 symbol(s), depending on 2 external package import(s).",
+  "concepts": [],
+  "entities": [],
+  "claims": [
+    {
+      "id": "claim:cart-98a9c25e:1",
+      "text": "cart exports useCartStore.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "cart-98a9c25e"
+    },
+    {
+      "id": "claim:cart-98a9c25e:2",
+      "text": "cart defines STORAGE_KEY, loadFromStorage, useCartStore.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "cart-98a9c25e"
+    },
+    {
+      "id": "claim:cart-98a9c25e:3",
+      "text": "cart imports pinia, vue.",
+      "confidence": 1,
+      "status": "extracted",
+      "polarity": "neutral",
+      "citation": "cart-98a9c25e"
+    }
+  ],
+  "questions": [
+    "Which downstream pages should explain how cart exports are consumed?",
+    "Why does cart depend on pinia?",
+    "What broader responsibility does cart serve in the codebase?"
+  ],
+  "tags": [],
+  "rationales": [],
+  "code": {
+    "moduleId": "module:cart-98a9c25e",
+    "language": "javascript",
+    "moduleName": "frontend/src/stores/cart",
+    "imports": [
+      {
+        "specifier": "pinia",
+        "importedSymbols": [
+          "defineStore"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      },
+      {
+        "specifier": "vue",
+        "importedSymbols": [
+          "ref",
+          "computed"
+        ],
+        "isTypeOnly": false,
+        "isExternal": true,
+        "reExport": false
+      }
+    ],
+    "dependencies": [
+      "pinia",
+      "vue"
+    ],
+    "symbols": [
+      {
+        "id": "symbol:cart-98a9c25e:storage-key.variable",
+        "name": "STORAGE_KEY",
+        "kind": "variable",
+        "signature": "const STORAGE_KEY = 'ramen-cart'",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:cart-98a9c25e:loadfromstorage.variable",
+        "name": "loadFromStorage",
+        "kind": "variable",
+        "signature": "const loadFromStorage = () => { try { const raw = localStorage.getItem(STORAGE_KEY) return raw ? JSON.parse(raw) : null } catch { return null } }",
+        "exported": false,
+        "calls": [],
+        "extends": [],
+        "implements": []
+      },
+      {
+        "id": "symbol:cart-98a9c25e:usecartstore.variable",
+        "name": "useCartStore",
+        "kind": "variable",
+        "signature": "export const useCartStore = defineStore('cart', () => { const saved = loadFromStorage() // State — restored from localStorage on init const items = ref(saved?.items ?? []) const...",
+        "exported": true,
+        "calls": [
+          "loadFromStorage"
+        ],
+        "extends": [],
+        "implements": []
+      }
+    ],
+    "exports": [
+      "useCartStore"
+    ],
+    "diagnostics": []
+  },
+  "producedAt": "2026-05-03T15:02:53.410Z"
+}

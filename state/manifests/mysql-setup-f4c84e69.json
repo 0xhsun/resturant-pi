@@ -1,0 +1,18 @@
+{
+  "sourceId": "mysql-setup-f4c84e69",
+  "title": "MYSQL_setup",
+  "originType": "file",
+  "sourceKind": "markdown",
+  "sourceClass": "first_party",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/MYSQL_setup.md",
+  "repoRelativePath": "MYSQL_setup.md",
+  "storedPath": "raw/sources/mysql-setup-f4c84e69.md",
+  "extractedTextPath": "state/extracts/mysql-setup-f4c84e69.md",
+  "extractedMetadataPath": "state/extracts/mysql-setup-f4c84e69.json",
+  "extractionHash": "5a3f45fb309c583f147420a428dbf2f74a64f636999c708336f370597876f1d8",
+  "mimeType": "text/markdown",
+  "contentHash": "f4c84e69568c2f9332acf3937c74219cab8d20cf8b758485c743fdecf32844f9",
+  "semanticHash": "01e154dbbb1c4bdb98bc3717f1be43e5d95bca9e3fc261b42f2bc1d90dde1987",
+  "createdAt": "2026-05-03T15:02:46.563Z",
+  "updatedAt": "2026-05-03T15:02:46.563Z"
+}

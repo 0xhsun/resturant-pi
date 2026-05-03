@@ -1,0 +1,19 @@
+{
+  "sourceId": "toppingcontroller-a74e3c3a",
+  "title": "toppingController",
+  "originType": "file",
+  "sourceKind": "code",
+  "sourceClass": "first_party",
+  "language": "javascript",
+  "originalPath": "/mnt/c/Users/oxhsun/Documents/GitHub/resturant-pi/backend/src/controllers/toppingController.js",
+  "repoRelativePath": "backend/src/controllers/toppingController.js",
+  "storedPath": "raw/sources/toppingcontroller-a74e3c3a.js",
+  "extractedTextPath": "state/extracts/toppingcontroller-a74e3c3a.md",
+  "extractedMetadataPath": "state/extracts/toppingcontroller-a74e3c3a.json",
+  "extractionHash": "cf941a9569bf6534b462c9abcdf87b05dce9bef0829860892518b774a2b5eacb",
+  "mimeType": "text/javascript",
+  "contentHash": "a74e3c3a9277eb351de87e520c9eacdfebc7a588da658f88ba259d2bd2650e5b",
+  "semanticHash": "a74e3c3a9277eb351de87e520c9eacdfebc7a588da658f88ba259d2bd2650e5b",
+  "createdAt": "2026-05-03T15:02:28.018Z",
+  "updatedAt": "2026-05-03T15:02:28.018Z"
+}
