@@ -50,3 +50,5 @@ mysql-data/
 # Testing
 coverage/
 .nyc_output/
+
+.pi

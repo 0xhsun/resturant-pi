@@ -1,26 +1,29 @@
 {
   "name": "ramen-shop-backend",
   "version": "1.0.0",
-  "description": "拉麵店後端 API - Express.js + MySQL",
+  "description": "拉麵店點餐系統後端 - Express.js + MySQL",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "db:init": "node scripts/init-db.js",
-    "db:seed": "node scripts/seed-db.js"
+    "dev": "nodemon src/index.js",
+    "init-db": "node scripts/init-db.js",
+    "seed-db": "node scripts/seed-db.js",
+    "setup-db": "npm run init-db && npm run seed-db"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "mysql2": "^3.6.5",
-    "openai": "^4.20.1",
-    "express-validator": "^7.0.1",
+    "express": "^4.18.2",
     "helmet": "^7.1.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.5"
+
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
-  }
+  },
+  "keywords": ["ramen", "restaurant", "express", "mysql"],
+  "author": "",
+  "license": "MIT"
 }
