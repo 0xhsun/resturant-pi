@@ -1,5 +1,5 @@
-import aiService from ../services/aiService.js;
-import { success, errorResponse } from ../utils/response.js;
+import aiService from '../services/aiService.js';
+import { success, errorResponse } from '../utils/response.js';
 
 const getRecommendation = async (req, res) => {
   try {

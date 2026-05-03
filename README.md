@@ -17,7 +17,7 @@ ramen-shop/
 - **Runtime**: Node.js 18+
 - **Framework**: Express.js 4.x
 - **Database**: MySQL 8.0
-- **AI**: OpenAI API
+- **AI**: Moonshot Kimi API (kimi-k2.6)
 
 ### 前端
 - **Framework**: Vue.js 3 (Composition API)
@@ -83,8 +83,12 @@ npm run dev -w frontend  # 前端 http://localhost:5173
 - `GET /api/orders/:id` - 查詢訂單詳情
 - `GET /api/orders/:id/status` - 查詢訂單狀態
 
-### AI 推薦 API
+### AI API (Moonshot Kimi)
+- `POST /api/ai/chat` - AI 對話助手
 - `POST /api/ai/recommend` - 根據用戶偏好推薦拉麵
+- `POST /api/llm/chat` - 標準 LLM 對話
+- `POST /api/llm/stream` - 流式對話 (SSE)
+- `GET /api/llm/models` - 取得可用模型列表
 
 ## 設計規範
 

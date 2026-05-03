@@ -5,6 +5,8 @@ const createOrder = async (req, res) => {
   try {
     const { customerName, phone, items, specialRequests } = req.body;
     
+    console.log('📦 收到訂單請求:', JSON.stringify(req.body, null, 2));
+    
     // 驗證必填欄位
     if (!items || !Array.isArray(items) || items.length === 0) {
       return res.status(400).json(errorResponse('訂單項目不能為空'));
@@ -12,8 +14,11 @@ const createOrder = async (req, res) => {
     
     // 驗證每個項目
     for (const item of items) {
-      if (!item.menuId || !item.quantity || item.quantity < 1) {
-        return res.status(400).json(errorResponse('訂單項目資料不完整'));
+      const menuId = Number(item.menuId);
+      const quantity = Number(item.quantity);
+      if (!menuId || !quantity || quantity < 1) {
+        console.log('❌ 訂單項目驗證失敗:', item);
+        return res.status(400).json(errorResponse(`訂單項目資料不完整: menuId=${item.menuId}, quantity=${item.quantity}`));
       }
     }
     

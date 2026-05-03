@@ -39,9 +39,9 @@
           <h2 class="text-lg font-bold text-neutral mb-6">製作進度</h2>
           
           <div class="space-y-6">
-            <div 
-              v-for="(step, index) in statusSteps" 
-              :key="step.status}
+            <div
+              v-for="(step, index) in statusSteps"
+              :key="step.status"
               class="flex items-start gap-4"
             >
               <div class="flex flex-col items-center">

@@ -15,7 +15,9 @@ const createOrder = async (orderData) => {
     const orderItems = [];
     
     for (const item of items) {
-      const menu = await menuService.getMenuById(item.menuId);
+      const menuId = Number(item.menuId);
+      console.log('🔍 查詢商品:', menuId, typeof menuId);
+      const menu = await menuService.getMenuById(menuId);
       if (!menu) {
         throw new Error(`商品不存在: ${item.menuId}`);
       }
@@ -36,7 +38,7 @@ const createOrder = async (orderData) => {
       }
       
       orderItems.push({
-        menuId: item.menuId,
+        menuId: menuId,
         quantity: item.quantity,
         unitPrice: menu.price,
         customizations: item.customizations || {},

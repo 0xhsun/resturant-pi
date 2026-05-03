@@ -1,11 +1,7 @@
-import { openai, validateApiKey } from '../config/openai.js';
+import { chatCompletion, simpleChat } from './llmService.js';
 import menuService from './menuService.js';
 
 const getRecommendation = async (preferences, budget = null) => {
-  if (!validateApiKey()) {
-    throw new Error('AI 服務未設定');
-  }
-  
   // 取得所有菜單資訊
   const menus = await menuService.getAllMenus();
   const menuList = menus.map(m => ({
@@ -37,24 +33,16 @@ ${JSON.stringify(availableMenus, null, 2)}
 
   const userPrompt = `顧客偏好：${preferences}${budget ? `\n預算：${budget} 元` : ''}`;
   
-  const completion = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
-    messages: [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: userPrompt }
-    ],
+  const recommendation = await simpleChat(userPrompt, {
+    systemPrompt,
     temperature: 0.7,
-    max_tokens: 800
+    maxTokens: 800
   });
   
-  return completion.choices[0].message.content;
+  return recommendation;
 };
 
 const chat = async (message, history = []) => {
-  if (!validateApiKey()) {
-    throw new Error('AI 服務未設定');
-  }
-  
   // 取得所有菜單資訊
   const menus = await menuService.getAllMenus();
   const menuList = menus.map(m => ({
@@ -83,20 +71,23 @@ ${JSON.stringify(menuList, null, 2)}
 
 請保持簡短精要，每次回覆不超過 150 字。`;
 
+  // 構建消息歷史
   const messages = [
     { role: 'system', content: systemPrompt },
     ...history.map(h => ({ role: h.role, content: h.content })),
     { role: 'user', content: message }
   ];
   
-  const completion = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
-    messages: messages,
+  const result = await chatCompletion(messages, {
     temperature: 0.8,
-    max_tokens: 300
+    maxTokens: 300
   });
   
-  return completion.choices[0].message.content;
+  if (!result.success) {
+    throw new Error(result.error || 'AI 對話失敗');
+  }
+  
+  return result.choices[0]?.message?.content || '';
 };
 
 export {

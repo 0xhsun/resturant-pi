@@ -1,54 +1,20 @@
 /**
- * LLM Service - Moonshot Kimi Provider (原生 fetch 版本)
- * 提供與 Kimi AI 的對話功能
+ * LLM Service - Moonshot Kimi Provider (OpenAI SDK 版本)
+ * 使用 OpenAI SDK v4 調用 Kimi API
+ * 
+ * 官方文檔: https://platform.kimi.ai/docs/guide/migrating-from-openai-to-kimi
+ * 推薦模型: kimi-k2.6 (最新最強大多模態模型)
  */
 
-import { KIMI_CONFIG, KIMI_MODELS, llmOptions, API_ENDPOINTS, validateLLMConfig } from '../config/llm.js';
-
-/**
- * 帶超時的 fetch 請求
- * @param {string} url - 請求 URL
- * @param {Object} options - fetch 選項
- * @param {number} timeout - 超時時間 (毫秒)
- * @returns {Promise<Response>}
- */
-async function fetchWithTimeout(url, options = {}, timeout = KIMI_CONFIG.timeout) {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeout);
-  
-  try {
-    const response = await fetch(url, {
-      ...options,
-      signal: controller.signal,
-    });
-    clearTimeout(timeoutId);
-    return response;
-  } catch (error) {
-    clearTimeout(timeoutId);
-    if (error.name === 'AbortError') {
-      throw new Error('請求超時');
-    }
-    throw error;
-  }
-}
-
-/**
- * 解析 Kimi API 錯誤響應
- * @param {Response} response - fetch 響應對象
- * @returns {Promise<Error>}
- */
-async function parseKimiError(response) {
-  let errorMessage = `HTTP ${response.status}: ${response.statusText}`;
-  try {
-    const errorData = await response.json();
-    if (errorData.error) {
-      errorMessage = errorData.error.message || errorData.error.code || JSON.stringify(errorData.error);
-    }
-  } catch (e) {
-    // 無法解析 JSON，使用原始錯誤訊息
-  }
-  return new Error(errorMessage);
-}
+import {
+  kimiClient,
+  validateApiKey,
+  llmOptions,
+  KIMI_MODELS,
+  getModelDescription,
+  getValidTemperature,
+  getValidTopP
+} from '../config/kimi-openai.js';
 
 /**
  * 發送聊天請求到 Kimi API
@@ -57,62 +23,55 @@ async function parseKimiError(response) {
  * @returns {Promise<Object>} API 響應
  */
 export async function chatCompletion(messages, options = {}) {
-  validateLLMConfig();
+  if (!validateApiKey()) {
+    return {
+      success: false,
+      error: 'MOONSHOT_API_KEY 環境變數未設置',
+      code: 'API_KEY_MISSING',
+    };
+  }
+
+  const model = options.model || llmOptions.defaultModel;
   
-  const {
-    model = llmOptions.defaultModel,
-    temperature = llmOptions.defaultTemperature,
-    maxTokens = llmOptions.defaultMaxTokens,
-    topP = llmOptions.defaultTopP,
-    stream = false,
-    tools,
-    toolChoice,
-  } = options;
-
-  // 構建請求體
-  const requestBody = {
-    model,
-    messages,
-    temperature,
-    max_tokens: maxTokens,
-    top_p: topP,
-    stream,
-  };
-
-  // 可選參數
-  if (tools) {
-    requestBody.tools = tools;
-  }
-  if (toolChoice) {
-    requestBody.tool_choice = toolChoice;
-  }
+  // 根據模型限制調整參數
+  const temperature = getValidTemperature(model, options.temperature ?? llmOptions.defaultTemperature);
+  const topP = getValidTopP(model, options.topP ?? llmOptions.defaultTopP);
+  const maxTokens = options.maxTokens || llmOptions.defaultMaxTokens;
+  const stream = options.stream || false;
 
   try {
-    const response = await fetchWithTimeout(API_ENDPOINTS.CHAT_COMPLETIONS, {
-      method: 'POST',
-      headers: KIMI_CONFIG.getHeaders(),
-      body: JSON.stringify(requestBody),
-    });
+    const requestParams = {
+      model,
+      messages,
+      temperature,
+      max_tokens: maxTokens,
+      top_p: topP,
+      stream,
+    };
 
-    if (!response.ok) {
-      throw await parseKimiError(response);
+    // 可選參數
+    if (options.tools) {
+      requestParams.tools = options.tools;
+    }
+    if (options.toolChoice) {
+      requestParams.tool_choice = options.toolChoice;
     }
 
-    const data = await response.json();
+    const completion = await kimiClient.chat.completions.create(requestParams);
 
     return {
       success: true,
-      data,
-      model: data.model,
-      choices: data.choices,
-      usage: data.usage,
+      data: completion,
+      model: completion.model,
+      choices: completion.choices,
+      usage: completion.usage,
     };
   } catch (error) {
     console.error('Kimi API 調用失敗:', error);
     return {
       success: false,
-      error: error.message,
-      code: error.code || 'UNKNOWN_ERROR',
+      error: error.message || 'Unknown error',
+      code: error.code || 'API_ERROR',
     };
   }
 }
@@ -130,7 +89,7 @@ export async function simpleChat(prompt, options = {}) {
   ];
 
   const result = await chatCompletion(messages, options);
-  
+
   if (!result.success) {
     throw new Error(result.error);
   }
@@ -145,78 +104,44 @@ export async function simpleChat(prompt, options = {}) {
  * @returns {AsyncGenerator} 流式響應生成器
  */
 export async function* streamChat(messages, options = {}) {
-  validateLLMConfig();
-  
-  const {
-    model = llmOptions.defaultModel,
-    temperature = llmOptions.defaultTemperature,
-    maxTokens = llmOptions.defaultMaxTokens,
-    topP = llmOptions.defaultTopP,
-  } = options;
+  if (!validateApiKey()) {
+    throw new Error('MOONSHOT_API_KEY 環境變數未設置');
+  }
 
-  const requestBody = {
-    model,
-    messages,
-    temperature,
-    max_tokens: maxTokens,
-    top_p: topP,
-    stream: true,
-  };
+  const model = options.model || llmOptions.defaultModel;
+  
+  // 根據模型限制調整參數
+  const temperature = getValidTemperature(model, options.temperature ?? llmOptions.defaultTemperature);
+  const topP = getValidTopP(model, options.topP ?? llmOptions.defaultTopP);
+  const maxTokens = options.maxTokens || llmOptions.defaultMaxTokens;
 
   try {
-    const response = await fetchWithTimeout(API_ENDPOINTS.CHAT_COMPLETIONS, {
-      method: 'POST',
-      headers: KIMI_CONFIG.getHeaders(),
-      body: JSON.stringify(requestBody),
+    const stream = await kimiClient.chat.completions.create({
+      model,
+      messages,
+      temperature,
+      max_tokens: maxTokens,
+      top_p: topP,
+      stream: true,
     });
 
-    if (!response.ok) {
-      throw await parseKimiError(response);
-    }
-
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder();
-    let buffer = '';
-
-    while (true) {
-      const { done, value } = await reader.read();
+    for await (const chunk of stream) {
+      const content = chunk.choices[0]?.delta?.content || '';
       
-      if (done) {
-        yield { done: true };
-        break;
+      if (content) {
+        yield {
+          content,
+          done: false,
+        };
       }
-
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || ''; // 保留未完成的行
-
-      for (const line of lines) {
-        const trimmedLine = line.trim();
-        if (!trimmedLine || trimmedLine === 'data: [DONE]') {
-          if (trimmedLine === 'data: [DONE]') {
-            yield { done: true };
-            return;
-          }
-          continue;
-        }
-
-        if (trimmedLine.startsWith('data: ')) {
-          try {
-            const jsonData = JSON.parse(trimmedLine.slice(6));
-            const content = jsonData.choices?.[0]?.delta?.content || '';
-            
-            if (content) {
-              yield {
-                content,
-                done: false,
-              };
-            }
-          } catch (e) {
-            // 忽略無法解析的行
-          }
-        }
+      
+      if (chunk.choices[0]?.finish_reason) {
+        yield { done: true };
+        return;
       }
     }
+
+    yield { done: true };
   } catch (error) {
     console.error('Kimi 流式 API 調用失敗:', error);
     throw error;
@@ -228,23 +153,20 @@ export async function* streamChat(messages, options = {}) {
  * @returns {Promise<Object>} 可用模型列表
  */
 export async function getAvailableModels() {
-  validateLLMConfig();
+  if (!validateApiKey()) {
+    return {
+      success: false,
+      error: 'MOONSHOT_API_KEY 環境變數未設置',
+      code: 'API_KEY_MISSING',
+    };
+  }
 
   try {
-    const response = await fetchWithTimeout(API_ENDPOINTS.MODELS, {
-      method: 'GET',
-      headers: KIMI_CONFIG.getHeaders(),
-    });
+    const response = await kimiClient.models.list();
 
-    if (!response.ok) {
-      throw await parseKimiError(response);
-    }
-
-    const data = await response.json();
-    
     return {
       success: true,
-      models: data.data.map(model => ({
+      models: response.data.map(model => ({
         id: model.id,
         name: model.id,
         object: model.object,
@@ -267,14 +189,4 @@ export async function getAvailableModels() {
       default: llmOptions.defaultModel,
     };
   }
-}
-
-function getModelDescription(modelId) {
-  const descriptions = {
-    'kimi-k2-0711-preview': 'Kimi K2.5 多模態模型 - 最新最強大的模型，支持圖像理解',
-    'moonshot-v1-8k': 'Moonshot V1 8K - 標準上下文長度模型',
-    'moonshot-v1-32k': 'Moonshot V1 32K - 長上下文模型',
-    'moonshot-v1-128k': 'Moonshot V1 128K - 超長上下文模型',
-  };
-  return descriptions[modelId] || 'Kimi 模型';
 }

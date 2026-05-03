@@ -33,7 +33,7 @@
                   <p v-if="hasCustomizations(item)" class="text-sm text-gray-400 mt-1">
                     {{ formatOptions(item) }}
                   </p>
-                  <p v-if="item.toppings?.length" class="text-sm text-gray-400">
+                  <p v-if="item.toppings && item.toppings.length" class="text-sm text-gray-400">
                     加購: {{ item.toppings.map(t => t.name).join(', ') }}
                   </p>
                 </div>
@@ -69,7 +69,7 @@
                 </div>
                 
                 <p class="font-bold text-accent">
-                  ${{ formatPrice((item.price + item.toppings?.reduce((s, t) => s + t.price, 0)) * item.quantity) }}
+                  ${{ formatPrice((item.price + getToppingsPrice(item)) * item.quantity) }}
                 </p>
               </div>
             </div>
@@ -84,7 +84,7 @@
             <!-- Customer Info -->
             <div class="space-y-4 mb-6">
               <div>
-                <label class="block text-sm text-gray-400 mb-2">用餐人姓名</label>
+                <label class="block text-sm text-gray-400 mb-2">用餐人姓名 <span class="text-red-500">*</span></label>
                 <input 
                   v-model="customerInfo.name"
                   type="text"
@@ -93,11 +93,11 @@
                 >
               </div>
               <div>
-                <label class="block text-sm text-gray-400 mb-2">桌號</label>
+                <label class="block text-sm text-gray-400 mb-2">桌號 <span class="text-red-500">*</span></label>
                 <input 
                   v-model="customerInfo.table"
                   type="text"
-                  placeholder="請輸入桌號"
+                  placeholder="例如：A01, 5號桌"
                   class="input-field"
                 >
               </div>
@@ -136,8 +136,11 @@
               <span v-else>確認訂單</span>
             </button>
 
-            <p v-if="orderStore.error" class="text-accent text-sm mt-4 text-center">
-              {{ orderStore.error }}
+            <p v-if="submitError" class="text-red-500 text-sm mt-4 text-center">
+              {{ submitError }}
+            </p>
+            <p v-else-if="!canSubmit" class="text-gray-500 text-sm mt-4 text-center">
+              請填寫用餐人姓名和桌號
             </p>
           </div>
         </div>
@@ -157,10 +160,12 @@ const cartStore = useCartStore()
 const orderStore = useOrderStore()
 
 const customerInfo = ref({
-  name: cartStore.customerName,
-  table: cartStore.tableNumber,
-  notes: cartStore.notes
+  name: cartStore.customerName || '',
+  table: cartStore.tableNumber || '',
+  notes: cartStore.notes || ''
 })
+
+const submitError = ref('')
 
 watch(customerInfo, (newVal) => {
   cartStore.setCustomerInfo(newVal.name, newVal.table, newVal.notes)
@@ -175,24 +180,43 @@ const hasCustomizations = (item) => {
 }
 
 const formatOptions = (item) => {
-  // Would format based on actual customization options
   return Object.entries(item.customizations || {})
     .map(([key, val]) => `${key}: ${val}`)
     .join(', ')
 }
 
 const formatPrice = (price) => {
-  return price?.toLocaleString('zh-TW') || '0'
+  if (!price && price !== 0) return '0'
+  return price.toLocaleString('zh-TW')
+}
+
+const getToppingsPrice = (item) => {
+  if (!item.toppings || !item.toppings.length) return 0
+  return item.toppings.reduce((sum, t) => sum + (t.price || 0), 0)
 }
 
 const submitOrder = async () => {
+  submitError.value = ''
+  
+  if (!customerInfo.value.name.trim()) {
+    submitError.value = '請輸入用餐人姓名'
+    return
+  }
+  if (!customerInfo.value.table.trim()) {
+    submitError.value = '請輸入桌號'
+    return
+  }
+  
   try {
     const orderData = cartStore.getOrderData()
+    console.log('發送訂單資料:', orderData)
     const order = await orderStore.createOrder(orderData)
+    console.log('訂單建立成功:', order)
     cartStore.clearCart()
-    router.push(`/order/${order.id}`)
+    router.push(`/order/${order.orderId || order.id}`)
   } catch (err) {
-    console.error('Order failed:', err)
+    console.error('訂單失敗:', err)
+    submitError.value = err.message || '訂單提交失敗，請稍後再試'
   }
 }
 </script>

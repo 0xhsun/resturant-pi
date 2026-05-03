@@ -82,17 +82,15 @@ export const useCartStore = defineStore('cart', () => {
 
   const getOrderData = () => {
     return {
-      customer_name: customerName.value,
-      table_number: tableNumber.value,
-      notes: notes.value,
+      customerName: customerName.value,
+      phone: tableNumber.value,
+      specialRequests: notes.value,
       items: items.value.map(item => ({
-        menu_id: item.menuId,
+        menuId: item.menuId,
         quantity: item.quantity,
-        price: item.price,
         customizations: item.customizations,
         toppings: item.toppings.map(t => t.id)
-      })),
-      total_amount: totalPrice.value
+      }))
     }
   }
 

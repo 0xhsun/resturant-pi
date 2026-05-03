@@ -15,11 +15,17 @@ export const useOrderStore = defineStore('order', () => {
     error.value = null
     try {
       const response = await orderApi.create(orderData)
-      currentOrder.value = response.data
-      return response.data
+      console.log('API 響應:', response.data)
+      
+      // 處理後端包裝格式 { success: true, data: {...}, message: '...' }
+      const result = response.data.data || response.data
+      currentOrder.value = result
+      return result
     } catch (err) {
-      error.value = err.response?.data?.message || '訂單建立失敗'
-      throw err
+      const errorMsg = err.response?.data?.message || err.response?.data?.error || err.message || '訂單建立失敗'
+      error.value = errorMsg
+      console.error('❌ 訂單建立失敗:', errorMsg, err.response?.data)
+      throw new Error(errorMsg)
     } finally {
       loading.value = false
     }
