@@ -263,7 +263,7 @@ const getRecommendation = async () => {
   isLoading.value = true
   try {
     const response = await aiApi.recommend(preferences.value)
-    recommendation.value = response.data
+    recommendation.value = response.data.data
   } catch (err) {
     console.error('AI recommendation failed:', err)
     // Fallback to mock recommendation
