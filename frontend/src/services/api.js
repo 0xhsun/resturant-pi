@@ -22,7 +22,7 @@ export const toppingApi = {
 
 // 客製化選項 API
 export const customizationApi = {
-  getAll: () => api.get('/customizations')
+  getAll: () => api.get('/toppings/customizations')
 }
 
 // 訂單 API

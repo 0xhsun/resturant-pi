@@ -31,7 +31,7 @@ export const useMenuStore = defineStore('menu', () => {
     error.value = null
     try {
       const response = await menuApi.getAll()
-      menus.value = response.data
+      menus.value = response.data.data || response.data || []
     } catch (err) {
       error.value = err.message
       console.error('Failed to fetch menus:', err)
@@ -45,7 +45,7 @@ export const useMenuStore = defineStore('menu', () => {
     error.value = null
     try {
       const response = await menuApi.getById(id)
-      currentMenu.value = response.data
+      currentMenu.value = response.data.data || response.data
       return response.data
     } catch (err) {
       error.value = err.message
@@ -58,7 +58,7 @@ export const useMenuStore = defineStore('menu', () => {
   const fetchCategories = async () => {
     try {
       const response = await menuApi.getCategories()
-      categories.value = response.data
+      categories.value = response.data.data || response.data || []
     } catch (err) {
       console.error('Failed to fetch categories:', err)
     }
@@ -67,7 +67,7 @@ export const useMenuStore = defineStore('menu', () => {
   const fetchToppings = async () => {
     try {
       const response = await toppingApi.getAll()
-      toppings.value = response.data
+      toppings.value = response.data.data || response.data || []
     } catch (err) {
       console.error('Failed to fetch toppings:', err)
     }
@@ -76,7 +76,7 @@ export const useMenuStore = defineStore('menu', () => {
   const fetchCustomizations = async () => {
     try {
       const response = await customizationApi.getAll()
-      customizations.value = response.data
+      customizations.value = response.data.data || response.data || []
     } catch (err) {
       console.error('Failed to fetch customizations:', err)
     }

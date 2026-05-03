@@ -16,7 +16,14 @@ const getAllMenus = async (category = null) => {
   
   sql += ' ORDER BY category, id';
   
-  return await query(sql, params);
+  const rows = await query(sql, params);
+  
+  // 將資料庫欄位映射為前端使用的欄位名稱
+  return rows.map(menu => ({
+    ...menu,
+    image: menu.image_url,
+    isPopular: menu.id <= 6 // 前 6 個菜品標記為人氣推薦
+  }));
 };
 
 const getMenuById = async (id) => {
@@ -27,7 +34,15 @@ const getMenuById = async (id) => {
     WHERE id = ? AND is_available = TRUE
   `;
   const rows = await query(sql, [id]);
-  return rows[0] || null;
+  
+  if (!rows[0]) return null;
+  
+  // 將資料庫欄位映射為前端使用的欄位名稱
+  return {
+    ...rows[0],
+    image: rows[0].image_url,
+    isPopular: rows[0].id <= 6
+  };
 };
 
 const getCategories = async () => {
