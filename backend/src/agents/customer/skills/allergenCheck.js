@@ -16,7 +16,7 @@ export const allergenCheckTool = {
   description: '根據要避開的過敏原，列出可安全食用的菜單項目',
   parameters: Type.Object({
     allergens: Type.Array(Type.String(), {
-      description: '過敏原清單：gluten(麩質)、soy(大豆)、pork(豬肉)、egg(蛋)、shellfish(甲殼類)、dairy(乳製品)',
+      description: '過敏原清單：gluten(麩質)、soy(大豆)、pork(豬肉)、egg(蛋)、shellfish(甲殼類)、dairy(乳製品) ',
     }),
   }),
   execute: async (_id, params) => {
