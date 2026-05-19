@@ -99,6 +99,27 @@ const createTables = async () => {
       FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
       FOREIGN KEY (menu_id) REFERENCES menus(id)
     )
+    `,
+
+    // agent_sessions 表格（CustomerAgent 持久化 session）
+    `
+    CREATE TABLE IF NOT EXISTS agent_sessions (
+      session_id VARCHAR(64) PRIMARY KEY,
+      role ENUM('customer', 'merchant') NOT NULL,
+      messages JSON NOT NULL,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    )
+    `,
+
+    // merchant_reports 表格（MerchantAgent cron 報表）
+    `
+    CREATE TABLE IF NOT EXISTS merchant_reports (
+      id INT PRIMARY KEY AUTO_INCREMENT,
+      report_date DATE NOT NULL,
+      type ENUM('daily_report', 'trend_analysis', 'inventory_alert') NOT NULL,
+      content TEXT NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
     `
   ];
   

@@ -1,4 +1,0 @@
-I scanned resturant-pi with SwarmVault: 73 sources -> 255 wiki pages, 472 graph nodes, 658 edges.
-Top hubs: Preview, backend, and frontend.
-Most surprising link: Candidates semantically_similar_to Projects.
-Everything stays local. Try: npm install -g @swarmvaultai/cli && swarmvault scan ./your-repo

@@ -12,12 +12,15 @@
     "setup-db": "npm run init-db && npm run seed-db"
   },
   "dependencies": {
+    "@mariozechner/pi-agent-core": "^0.73.1",
+    "@mariozechner/pi-ai": "^0.73.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
     "mysql2": "^3.6.5",
+    "node-cron": "^4.2.1",
     "openai": "^6.35.0"
   },
   "devDependencies": {

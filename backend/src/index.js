@@ -16,7 +16,9 @@ import aiRoutes from './routes/ai.js';
 import menuRoutes from './routes/menus.js';
 import toppingRoutes from './routes/toppings.js';
 import orderRoutes from './routes/orders.js';
+import { customerRouter, merchantRouter } from './routes/agentRoutes.js';
 import { testConnection } from './config/database.js';
+import { initMerchantAgent } from './agents/merchant/agent.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -44,6 +46,8 @@ app.get('/health', (req, res) => {
 // API 路由
 app.use('/api/llm', llmRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/ai/customer', customerRouter);
+app.use('/api/ai/merchant', merchantRouter);
 app.use('/api/menus', menuRoutes);
 app.use('/api/toppings', toppingRoutes);
 app.use('/api/orders', orderRoutes);
@@ -78,6 +82,7 @@ const startServer = async () => {
     console.log(`🚀 後端服務器運行在 http://localhost:${PORT}`);
     console.log(`🤖 LLM Provider: Moonshot Kimi`);
     console.log(`📚 API 文檔: https://platform.moonshot.ai/docs/api-reference`);
+    initMerchantAgent();
   });
 };
 

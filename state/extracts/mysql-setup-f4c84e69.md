@@ -1,4 +1,0 @@
-- 容器名稱: mysql-ramen-shop
- - 端口: 3306:3306
- - 資料庫: ramen_shop (已自動創建)
- - 密碼: password
